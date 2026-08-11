@@ -1,6 +1,6 @@
 {
   "name": "Plexaar",
-  "description": "Connected Enterprise Operating Ecosystem - Unifying Buzzcom, Calendex, iReach, Ondal, and SalexPlex.",
+  "description": "Connected Enterprise Operating Ecosystem - Unifying Buzzcom, Calendex, iReach, ONDEL, and SalexPlex.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

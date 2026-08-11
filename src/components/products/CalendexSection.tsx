@@ -444,7 +444,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                 </div>
                 <div>
                   <div className="text-sm font-bold text-white">Enterprise Booking Command Simulator</div>
-                  <div className="text-xs text-slate-400">Synced with iReach Staff Rosters & Ondal Ledger</div>
+                  <div className="text-xs text-slate-400">Synced with iReach Staff Rosters & ONDEL Ledger</div>
                 </div>
               </div>
 
@@ -544,7 +544,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                         <span>Appointment Confirmed for {selectedSlot}!</span>
                       </div>
                       <p className="text-xs leading-relaxed text-emerald-200/80">
-                        ⚡ Automatically sent SMS reminder to client. Created Buzzcom channel and logged preliminary Ondal invoice draft.
+                        ⚡ Automatically sent SMS reminder to client. Created Buzzcom channel and logged preliminary ONDEL invoice draft.
                       </p>
                     </div>
                   ) : (

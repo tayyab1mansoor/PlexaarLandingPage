@@ -74,8 +74,8 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     ]
   },
   {
-    id: 'ondal',
-    name: 'ONDAL',
+    id: 'ondel',
+    name: 'ONDEL',
     tagline: 'Financial Visibility Built Into Your Business.',
     category: 'FINANCE & FINANCIAL MANAGEMENT',
     description: 'Command center for real-time revenue tracking, automated invoicing, expense classification, ledger streams, and cash flow forecasting.',
@@ -163,10 +163,10 @@ export const JOURNEY_STEPS: JourneyStep[] = [
   {
     stepNumber: '05',
     title: 'Automated Financial Settlement',
-    productId: 'ondal',
-    productName: 'ONDAL',
+    productId: 'ondel',
+    productName: 'ONDEL',
     action: 'Financial Management',
-    description: 'Ondal generates the invoice automatically upon appointment completion, processing payment and logging revenue to the central ledger.',
+    description: 'ONDEL generates the invoice automatically upon appointment completion, processing payment and logging revenue to the central ledger.',
     iconName: 'TrendingUp'
   },
   {
@@ -193,7 +193,7 @@ export const ROLE_VIEWS: RoleView[] = [
       { title: 'Client Satisfaction (CSAT)', value: '4.9/5', change: '+0.4', isPositive: true }
     ],
     primaryProduct: 'buzzcom',
-    secondaryProducts: ['ondal', 'salexplex', 'ireach', 'calendex'],
+    secondaryProducts: ['ondel', 'salexplex', 'ireach', 'calendex'],
     keyFocus: ['Global Organizational Health', 'Strategic Resource Allocation', 'Real-time Profitability Tracking']
   },
   {
@@ -237,7 +237,7 @@ export const ROLE_VIEWS: RoleView[] = [
       { title: 'Operating Margin', value: '38.5%', change: '+4.1%', isPositive: true },
       { title: 'Invoice Paid-on-Time Rate', value: '96.4%', change: '+14.2%', isPositive: true }
     ],
-    primaryProduct: 'ondal',
+    primaryProduct: 'ondel',
     secondaryProducts: ['calendex', 'salexplex'],
     keyFocus: ['Ledger Stream Accuracy', 'Automated AR & Billing', 'Expense Optimization']
   },
@@ -267,7 +267,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     category: 'Products',
     question: 'What specialized products are included inside the Plexaar ecosystem?',
-    answer: 'Plexaar includes five specialized enterprise products: BUZZCOM (Chat & Calling Communication Hub), CALENDEX (Appointment & Booking Management), iREACH (HR & Workforce Management), ONDAL (Financial Operations & Analytics), and SALEXPLEX (Marketing Portal & Campaign Management).'
+    answer: 'Plexaar includes five specialized enterprise products: BUZZCOM (Chat & Calling Communication Hub), CALENDEX (Appointment & Booking Management), iREACH (HR & Workforce Management), ONDEL (Financial Operations & Analytics), and SALEXPLEX (Marketing Portal & Campaign Management).'
   },
   {
     category: 'General',
@@ -291,8 +291,8 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     category: 'Products',
-    question: 'What financial operations are managed by ONDAL?',
-    answer: 'ONDAL acts as Plexaar’s financial command center. It tracks real-time revenue streams, automated multi-currency invoicing, expense classification, ledger streams, accounts receivable aging, and executive cash-flow forecasting.'
+    question: 'What financial operations are managed by ONDEL?',
+    answer: 'ONDEL acts as Plexaar’s financial command center. It tracks real-time revenue streams, automated multi-currency invoicing, expense classification, ledger streams, accounts receivable aging, and executive cash-flow forecasting.'
   },
   {
     category: 'Products',

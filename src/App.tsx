@@ -7,7 +7,7 @@ import { ProblemSection } from './components/ProblemSection';
 import { BuzzcomSection } from './components/products/BuzzcomSection';
 import { CalendexSection } from './components/products/CalendexSection';
 import { IReachSection } from './components/products/IReachSection';
-import { OndalSection } from './components/products/OndalSection';
+import { OndelSection } from './components/products/OndelSection';
 import { SalexPlexSection } from './components/products/SalexPlexSection';
 import { CustomerJourneySection } from './components/CustomerJourneySection';
 import { ExecutiveRoleSection } from './components/ExecutiveRoleSection';
@@ -71,7 +71,7 @@ export default function App() {
           <BuzzcomSection theme={THEME} onOpenDemo={handleOpenDemo} />
           <CalendexSection theme={THEME} onOpenDemo={handleOpenDemo} />
           <IReachSection theme={THEME} onOpenDemo={handleOpenDemo} />
-          <OndalSection theme={THEME} onOpenDemo={handleOpenDemo} />
+          <OndelSection theme={THEME} onOpenDemo={handleOpenDemo} />
           <SalexPlexSection theme={THEME} onOpenDemo={handleOpenDemo} />
         </div>
 

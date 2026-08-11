@@ -23,7 +23,7 @@ export const QuickNavPills: React.FC<QuickNavPillsProps> = ({ theme, onNavigateT
       case 'buzzcom': return 'Communicate';
       case 'calendex': return 'Schedule';
       case 'ireach': return 'Manage People';
-      case 'ondal': return 'Manage Finance';
+      case 'ondel': return 'Manage Finance';
       case 'salexplex': return 'Grow Marketing';
       default: return 'Explore';
     }

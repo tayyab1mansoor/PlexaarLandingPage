@@ -18,12 +18,12 @@ import {
   Sparkles
 } from 'lucide-react';
 
-interface OndalSectionProps {
+interface OndelSectionProps {
   theme: ThemeMode;
   onOpenDemo: (id?: ProductId) => void;
 }
 
-export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo }) => {
+export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo }) => {
   const [activeTab, setActiveTab] = useState<'animatedGif' | 'interactiveLedger'>('animatedGif');
   const [isPlayingGif, setIsPlayingGif] = useState(true);
   const [invoices, setInvoices] = useState([
@@ -39,17 +39,17 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
   };
 
   const isDark = theme === 'dark';
-  const ondalBgImage = PRODUCT_BG_IMAGES.ondal;
-  const ondalGif = PRODUCT_GIF_ANIMATIONS.ondal;
+  const ONDELBgImage = PRODUCT_BG_IMAGES.ondel;
+  const ONDELGif = PRODUCT_GIF_ANIMATIONS.ondel;
 
   return (
-    <section id="product-ondal" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
+    <section id="product-ondel" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Product Relevant Background Image with Opacity Slider */}
       <div 
         className="absolute inset-0 bg-cover bg-center pointer-events-none transition-opacity duration-500"
         style={{ 
-          backgroundImage: `url(${ondalBgImage})`, 
+          backgroundImage: `url(${ONDELBgImage})`, 
           opacity: PRODUCT_BG_OPACITY 
         }}
       />
@@ -62,7 +62,7 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
           <div className="space-y-3 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-[#42D742]/10 border border-emerald-500/20">
               <TrendingUp className="w-3.5 h-3.5 text-emerald-500" />
-              ONDAL — FINANCIAL COMMAND & ERP LEDGER
+              ONDEL — FINANCIAL COMMAND & ERP LEDGER
             </div>
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Enterprise Cashflow & Invoicing{' '}
@@ -77,10 +77,10 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             <button
-              onClick={() => onOpenDemo('ondal')}
+              onClick={() => onOpenDemo('ondel')}
               className="px-6 py-3 rounded-xl text-sm font-bold bg-[#42D742] hover:bg-emerald-400 text-slate-950 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#FFD705]/20 shrink-0"
             >
-              <span>Request Ondal Demo</span>
+              <span>Request ONDEL Demo</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -127,7 +127,7 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
               <div className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full bg-[#42D742] animate-ping" />
                 <span className="text-xs font-extrabold uppercase text-emerald-600 dark:text-emerald-300 tracking-wider">
-                  Ondal Financial Command GIF Preview
+                  ONDEL Financial Command GIF Preview
                 </span>
               </div>
               <button
@@ -143,8 +143,8 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 group aspect-video sm:aspect-[21/9] bg-slate-950 flex items-center justify-center">
               <img 
-                src={ondalGif.gifUrl} 
-                alt={ondalGif.caption}
+                src={ONDELGif.gifUrl} 
+                alt={ONDELGif.caption}
                 className={`w-full h-full object-cover transition-all duration-700 ${isPlayingGif ? 'scale-105 filter contrast-105' : 'filter grayscale'}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
@@ -154,8 +154,8 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
                   <PieChart className="w-3.5 h-3.5 text-emerald-400 animate-spin" />
                   Real-Time Cashflow & ERP Ledger
                 </div>
-                <div className="text-sm font-bold text-white">{ondalGif.caption}</div>
-                <p className="text-[11px] text-slate-300 leading-relaxed">{ondalGif.description}</p>
+                <div className="text-sm font-bold text-white">{ONDELGif.caption}</div>
+                <p className="text-[11px] text-slate-300 leading-relaxed">{ONDELGif.description}</p>
               </div>
 
               <div className="absolute bottom-6 right-6 p-3 rounded-xl bg-[#42D742] text-slate-950 font-extrabold text-xs shadow-2xl border border-emerald-300 flex items-center gap-2">
@@ -195,7 +195,7 @@ export const OndalSection: React.FC<OndalSectionProps> = ({ theme, onOpenDemo })
 
               <div className={`p-5 rounded-2xl border ${isDark ? 'bg-slate-950/80 border-slate-800' : 'bg-slate-50 border-slate-200'} space-y-2`}>
                 <div className={`flex items-center justify-between text-xs font-bold uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-                  <span>Ondal Auto Reconciliation</span>
+                  <span>ONDEL Auto Reconciliation</span>
                   <CreditCard className="w-4 h-4 text-[#548DFF]" />
                 </div>
                 <div className="text-3xl font-black text-[#548DFF]">100%</div>

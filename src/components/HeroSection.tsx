@@ -36,7 +36,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     calendex: { label: 'Calendex Appointments', url: PRODUCT_BG_IMAGES.calendex },
     buzzcom: { label: 'Buzzcom Messages', url: PRODUCT_BG_IMAGES.buzzcom },
     ireach: { label: 'iReach HR Radar', url: PRODUCT_BG_IMAGES.ireach },
-    ondal: { label: 'Ondal Financials', url: PRODUCT_BG_IMAGES.ondal },
+    ondel: { label: 'ONDEL Financials', url: PRODUCT_BG_IMAGES.ondel },
     salexplex: { label: 'SalexPlex Marketing', url: PRODUCT_BG_IMAGES.salexplex }
   };
 
@@ -204,7 +204,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <line x1="50%" y1="50%" x2="84%" y2="28%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Bottom-Right (iReach) */}
                 <line x1="50%" y1="50%" x2="80%" y2="78%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
-                {/* Center to Bottom-Left (Ondal) */}
+                {/* Center to Bottom-Left (ONDEL) */}
                 <line x1="50%" y1="50%" x2="20%" y2="78%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Top-Left (SalexPlex) */}
                 <line x1="50%" y1="50%" x2="16%" y2="28%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
@@ -284,19 +284,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </div>
               </div>
 
-              {/* BOTTOM LEFT NODE: ONDAL */}
+              {/* BOTTOM LEFT NODE: ONDEL */}
               <div 
-                onClick={() => setActiveNode('ondal')}
+                onClick={() => setActiveNode('ondel')}
                 className={`absolute bottom-[10%] left-[5%] sm:left-[12%] z-20 cursor-pointer group transition-all duration-300 ${
-                  activeNode === 'ondal' || (isSimulating && activeSimulatedProduct.id === 'ondal') ? 'scale-110' : 'hover:scale-105'
+                  activeNode === 'ondel' || (isSimulating && activeSimulatedProduct.id === 'ondel') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
                 <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#FFD705]/50 shadow-md shadow-[#FFD705]/15 hover:border-[#FFD705] hover:shadow-lg transition-all">
                   <div className="w-9 h-9 rounded-full overflow-hidden border border-[#FFD705]/40 shadow-sm shrink-0 bg-white flex items-center justify-center">
-                    <img src={PRODUCT_LOGOS.ondal} alt="Ondal" className="w-5 h-5 object-contain" />
+                    <img src={PRODUCT_LOGOS.ondel} alt="ONDEL" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-[#131313] group-hover:text-[#0575E6]">ONDAL</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#0575E6]">ONDEL</div>
                     <div className="text-[10px] text-[#8d8d8d] font-medium">Finance</div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 export type ThemeMode = 'dark' | 'light';
 
-export type ProductId = 'buzzcom' | 'calendex' | 'ireach' | 'ondal' | 'salexplex';
+export type ProductId = 'buzzcom' | 'calendex' | 'ireach' | 'ondel' | 'salexplex';
 
 export interface ProductInfo {
   id: ProductId;

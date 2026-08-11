@@ -221,7 +221,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                     <div className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                       Funnel Conversion Pipeline ({campaigns[activeCampaign].name})
                     </div>
-                    <span className="text-xs text-[#548DFF] font-bold">Auto-Sync to Ondal ERP</span>
+                    <span className="text-xs text-[#548DFF] font-bold">Auto-Sync to ONDEL ERP</span>
                   </div>
 
                   <div className="space-y-3">

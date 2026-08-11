@@ -19,7 +19,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
     phone: '',
     country: 'United States',
     companySize: '100-500 Employees',
-    selectedProducts: preselectedProduct ? [preselectedProduct] : ['buzzcom', 'calendex', 'ireach', 'ondal', 'salexplex'],
+    selectedProducts: preselectedProduct ? [preselectedProduct] : ['buzzcom', 'calendex', 'ireach', 'ondel', 'salexplex'],
     managementGoals: ''
   });
 
@@ -58,7 +58,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
   const selectAllProducts = () => {
     setFormData((prev) => ({
       ...prev,
-      selectedProducts: ['buzzcom', 'calendex', 'ireach', 'ondal', 'salexplex']
+      selectedProducts: ['buzzcom', 'calendex', 'ireach', 'ondel', 'salexplex']
     }));
   };
 

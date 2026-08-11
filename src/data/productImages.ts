@@ -1,7 +1,7 @@
 import buzzcomBg from '../assets/images/buzzcom_bg_1786104278303.jpg';
 import calendexBg from '../assets/images/calendex_bg_1786104264129.jpg';
 import ireachBg from '../assets/images/ireach_bg_1786104297978.jpg';
-import ondalBg from '../assets/images/ondal_bg_1786104309883.jpg';
+import ondelBg from '../assets/images/ondel_bg_1786104309883.jpg';
 import salexplexBg from '../assets/images/salexplex_bg_1786104324961.jpg';
 import calendexScheduleMockup from '../assets/images/calendex_schedule_mockup_1786105284737.jpg';
 import calendexExactLaptopMobile from '../assets/images/calendex_exact_laptop_mobile_1786105606052.jpg';
@@ -34,7 +34,7 @@ export const PRODUCT_BG_IMAGES: Record<ProductId, string> = {
   buzzcom: buzzcomBg,
   calendex: sectionCalendexWorking,
   ireach: sectionHrPeople,
-  ondal: ondalBg,
+  ondel: ondelBg,
   salexplex: sectionMarketingPc,
 };
 
@@ -75,9 +75,9 @@ export const PRODUCT_GIF_ANIMATIONS: Record<ProductId, { gifUrl: string; posterU
     caption: 'HR Workforce Attendance Radar, Shift Rosters & Payroll Stream',
     description: 'Automated employee check-in monitoring, biometric leave approvals, and multi-location staffing analytics.'
   },
-  ondal: {
+  ondel: {
     gifUrl: sectionStats,
-    posterUrl: ondalBg,
+    posterUrl: ondelBg,
     caption: 'Real-Time Financial Ledger, Double-Entry Cashflow & Invoice Engine',
     description: 'Automated accounts receivable, multi-currency ledger reconciliation, and executive financial health dashboards.'
   },

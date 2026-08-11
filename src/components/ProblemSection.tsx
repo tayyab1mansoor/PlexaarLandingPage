@@ -36,8 +36,8 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
   const unifiedSolutions = [
     { title: 'Buzzcom Communication', desc: 'Calls & messages automatically attached to client files', icon: MessageSquare, color: 'text-[#548DFF]' },
     { title: 'Calendex Appointments', desc: 'Real-time staff allocation auto-checked with iReach', icon: Calendar, color: 'text-[#548DFF]' },
-    { title: 'iReach HR Hub', desc: 'Live attendance & payroll sync directly with Ondal', icon: Users, color: 'text-blue-400' },
-    { title: 'Ondal Financial Ledger', desc: 'Automated billing upon completion of Calendex slots', icon: TrendingUp, color: 'text-emerald-400' },
+    { title: 'iReach HR Hub', desc: 'Live attendance & payroll sync directly with ONDEL', icon: Users, color: 'text-blue-400' },
+    { title: 'ONDEL Financial Ledger', desc: 'Automated billing upon completion of Calendex slots', icon: TrendingUp, color: 'text-emerald-400' },
     { title: 'SalexPlex Marketing', desc: 'Lead attribution tracked end-to-end to revenue generated', icon: Megaphone, color: 'text-[#4294FF]' }
   ];
 
