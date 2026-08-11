@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { PLEXAAR_PRODUCTS } from '../data/plexaarData';
-import { PRODUCT_BG_IMAGES } from '../data/productImages';
+import { PRODUCT_BG_IMAGES, HERO_SECTION_BG } from '../data/productImages';
 import { PRODUCT_LOGOS, PLEXAAR_HEADER_LOGO } from '../data/productLogos';
 import { ThemeMode, ProductId } from '../types';
 import { 
@@ -28,31 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const [activeNode, setActiveNode] = useState<ProductId | 'plexaar'>('plexaar');
   const [isSimulating, setIsSimulating] = useState(true);
   const [activeStep, setActiveStep] = useState(0);
-  const [selectedHeroBg, setSelectedHeroBg] = useState<string>('calendex');
   const heroBgOpacity = 30;
-
-  // Background map options
-  const heroBgOptions: Record<string, { label: string; url: string }> = {
-    calendex: { label: 'Calendex Appointments', url: PRODUCT_BG_IMAGES.calendex },
-    buzzcom: { label: 'Buzzcom Messages', url: PRODUCT_BG_IMAGES.buzzcom },
-    ireach: { label: 'iReach HR Radar', url: PRODUCT_BG_IMAGES.ireach },
-    ondel: { label: 'ONDEL Financials', url: PRODUCT_BG_IMAGES.ondel },
-    salexplex: { label: 'SalexPlex Marketing', url: PRODUCT_BG_IMAGES.salexplex }
-  };
-
-  const bgKeys = Object.keys(heroBgOptions);
-  const currentBgUrl = heroBgOptions[selectedHeroBg]?.url || PRODUCT_BG_IMAGES.calendex;
-
-  // Auto slideshow sequence for background image
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSelectedHeroBg((prev) => {
-        const nextIdx = (bgKeys.indexOf(prev) + 1) % bgKeys.length;
-        return bgKeys[nextIdx];
-      });
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [bgKeys]);
 
   // Simulation pulse sequence
   useEffect(() => {
@@ -73,13 +49,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Base Solid Background */}
       <div className={`absolute inset-0 ${isDark ? 'bg-slate-950' : 'bg-slate-50'}`} />
 
-      {/* High-Resolution Dynamic Animated Hero Background Image */}
+      {/* Static Hero Background Image */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <img 
-          key={currentBgUrl}
-          src={currentBgUrl} 
+          src={HERO_SECTION_BG} 
           alt="Hero Enterprise Background"
-          className="w-full h-full object-cover transition-all duration-1000 transform animate-kenburns"
+          className="w-full h-full object-cover transform animate-kenburns"
           style={{ opacity: heroBgOpacity / 100 }}
           onError={(e) => {
             // Reliable high-res tech fallback image if local asset fails to load
@@ -373,10 +348,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 >
                   {/* Background Image */}
                   <div 
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 opacity-50 group-hover:opacity-70"
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                     style={{ backgroundImage: `url(${bgImg})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/85 via-white/40 to-transparent" />
 
                   <div className="relative z-10 p-5 flex items-start justify-between">
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-white/90 border border-[#548DFF]/25 text-[#548DFF]">
@@ -389,7 +364,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <h4 className="text-lg font-black text-[#131313] group-hover:text-[#548DFF] transition-colors">
                       {prod.name}
                     </h4>
-                    <p className="text-xs text-[#8d8d8d] line-clamp-2">
+                    <p className="text-xs text-[#131313] font-medium line-clamp-2">
                       {prod.tagline}
                     </p>
                   </div>

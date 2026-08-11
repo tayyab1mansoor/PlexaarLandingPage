@@ -6,6 +6,7 @@ import salexplexBg from '../assets/images/salexplex_bg_1786104324961.jpg';
 import calendexScheduleMockup from '../assets/images/calendex_schedule_mockup_1786105284737.jpg';
 import calendexExactLaptopMobile from '../assets/images/calendex_exact_laptop_mobile_1786105606052.jpg';
 import heroEnterpriseBg from '../assets/images/hero_bg_enterprise_1786105297370.jpg';
+import heroSectionBg from '../assets/images/herosection.png';
 
 import sectionOfficeTeam from '../assets/images/sections/office-team.png';
 import sectionManagementTeam from '../assets/images/sections/management-team.png';
@@ -26,6 +27,7 @@ export const SECTION_BG_OPACITY = 0.2;
 export const PRODUCT_BG_OPACITY = 0.22;
 
 export const HERO_ENTERPRISE_BG = heroEnterpriseBg;
+export const HERO_SECTION_BG = heroSectionBg;
 export const CALENDEX_SCHEDULE_MOCKUP_IMAGE = calendexScheduleMockup;
 export const CALENDEX_EXACT_LAPTOP_MOBILE_IMAGE = calendexExactLaptopMobile;
 
