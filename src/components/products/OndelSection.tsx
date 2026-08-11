@@ -6,7 +6,6 @@ import {
   DollarSign, 
   CreditCard, 
   ArrowRight, 
-  CheckCircle2, 
   BarChart2, 
   ArrowUpRight,
   Receipt,
@@ -45,7 +44,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
   return (
     <section id="product-ondel" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
-      {/* Product Relevant Background Image with Opacity Slider */}
+      {/* Product Relevant Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center pointer-events-none transition-opacity duration-500"
         style={{ 
@@ -60,13 +59,13 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
         {/* Header */}
         <div className={`flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pb-12 border-b ${isDark ? 'border-slate-800/80' : 'border-slate-200'}`}>
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-[#42D742]/10 border border-emerald-500/20">
-              <TrendingUp className="w-3.5 h-3.5 text-emerald-500" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#FFD705]/15 border border-[#FFD705]/40">
+              <TrendingUp className="w-3.5 h-3.5 text-[#548DFF]" />
               ONDEL — FINANCIAL COMMAND & ERP LEDGER
             </div>
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Enterprise Cashflow & Invoicing{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD705] via-[#548DFF] to-[#5B7CFD]">
                 Automated at Scale.
               </span>
             </h2>
@@ -78,7 +77,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             <button
               onClick={() => onOpenDemo('ondel')}
-              className="px-6 py-3 rounded-xl text-sm font-bold bg-[#42D742] hover:bg-emerald-400 text-slate-950 transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#FFD705]/20 shrink-0"
+              className="px-6 py-3 rounded-xl text-sm font-bold bg-[#548DFF] hover:bg-[#5B7CFD] text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#548DFF]/25 shrink-0"
             >
               <span>Request ONDEL Demo</span>
               <ArrowRight className="w-4 h-4" />
@@ -93,7 +92,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
               onClick={() => setActiveTab('animatedGif')}
               className={`px-4 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 ${
                 activeTab === 'animatedGif'
-                  ? 'bg-[#42D742] text-slate-950 shadow-md'
+                  ? 'bg-[#FFD705] text-slate-950 shadow-md'
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -105,7 +104,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
               onClick={() => setActiveTab('interactiveLedger')}
               className={`px-4 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 ${
                 activeTab === 'interactiveLedger'
-                  ? 'bg-[#42D742] text-slate-950 shadow-md'
+                  ? 'bg-[#FFD705] text-slate-950 shadow-md'
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -114,19 +113,19 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
             </button>
           </div>
 
-          <div className="text-xs text-emerald-600 dark:text-emerald-300 font-medium flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-500" />
+          <div className="text-xs text-[#548DFF] font-medium flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#548DFF]" />
             <span>GAAP & IFRS Compliant • Instant Cash Reconciliation</span>
           </div>
         </div>
 
         {/* TAB 1: LIVE ANIMATED GIF SHOWCASE */}
         {activeTab === 'animatedGif' && (
-          <div className={`mt-8 rounded-3xl border ${isDark ? 'border-emerald-500/40 bg-slate-900/90 shadow-2xl' : 'border-emerald-200 bg-white shadow-xl'} p-6 sm:p-8 relative overflow-hidden backdrop-blur-md animate-in fade-in`}>
+          <div className={`mt-8 rounded-3xl border ${isDark ? 'border-[#548DFF]/40 bg-slate-900/90 shadow-2xl' : 'border-[#548DFF]/20 bg-white shadow-xl'} p-6 sm:p-8 relative overflow-hidden backdrop-blur-md animate-in fade-in`}>
             <div className={`flex items-center justify-between pb-4 mb-4 border-b ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-[#42D742] animate-ping" />
-                <span className="text-xs font-extrabold uppercase text-emerald-600 dark:text-emerald-300 tracking-wider">
+                <span className="w-3 h-3 rounded-full bg-[#FFD705] animate-ping" />
+                <span className="text-xs font-extrabold uppercase text-[#548DFF] tracking-wider">
                   ONDEL Financial Command GIF Preview
                 </span>
               </div>
@@ -136,7 +135,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
                   isDark ? 'bg-slate-800 text-white hover:bg-slate-700' : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
                 }`}
               >
-                {isPlayingGif ? <Pause className="w-3.5 h-3.5 text-amber-500" /> : <Play className="w-3.5 h-3.5 text-emerald-500" />}
+                {isPlayingGif ? <Pause className="w-3.5 h-3.5 text-amber-500" /> : <Play className="w-3.5 h-3.5 text-[#548DFF]" />}
                 <span>{isPlayingGif ? 'Pause Animation' : 'Play Animation'}</span>
               </button>
             </div>
@@ -149,17 +148,17 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-              <div className="absolute top-6 left-6 p-4 rounded-2xl bg-slate-950/80 border border-emerald-500/40 backdrop-blur-md max-w-sm space-y-1">
-                <div className="text-xs font-black text-emerald-300 uppercase tracking-widest flex items-center gap-2">
-                  <PieChart className="w-3.5 h-3.5 text-emerald-400 animate-spin" />
+              <div className="absolute top-6 left-6 p-4 rounded-2xl bg-slate-950/80 border border-[#548DFF]/40 backdrop-blur-md max-w-sm space-y-1">
+                <div className="text-xs font-black text-[#FFD705] uppercase tracking-widest flex items-center gap-2">
+                  <PieChart className="w-3.5 h-3.5 text-[#FFD705] animate-spin" />
                   Real-Time Cashflow & ERP Ledger
                 </div>
                 <div className="text-sm font-bold text-white">{ONDELGif.caption}</div>
                 <p className="text-[11px] text-slate-300 leading-relaxed">{ONDELGif.description}</p>
               </div>
 
-              <div className="absolute bottom-6 right-6 p-3 rounded-xl bg-[#42D742] text-slate-950 font-extrabold text-xs shadow-2xl border border-emerald-300 flex items-center gap-2">
-                <BarChart2 className="w-4 h-4 text-emerald-950" />
+              <div className="absolute bottom-6 right-6 p-3 rounded-xl bg-[#FFD705] text-slate-950 font-extrabold text-xs shadow-2xl border border-[#FFD705]/60 flex items-center gap-2">
+                <BarChart2 className="w-4 h-4 text-slate-950" />
                 <span>$4.2M Monthly Transaction Ledger Audited</span>
               </div>
             </div>
@@ -175,10 +174,10 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
               <div className={`p-5 rounded-2xl border ${isDark ? 'bg-slate-950/80 border-slate-800' : 'bg-slate-50 border-slate-200'} space-y-2`}>
                 <div className={`flex items-center justify-between text-xs font-bold uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                   <span>Gross Monthly Revenue</span>
-                  <DollarSign className="w-4 h-4 text-emerald-500" />
+                  <DollarSign className="w-4 h-4 text-[#548DFF]" />
                 </div>
                 <div className={`text-3xl font-black ${isDark ? 'text-white' : 'text-slate-900'}`}>$482,900</div>
-                <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                <div className="text-xs font-bold text-[#548DFF] flex items-center gap-1">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                   <span>+24.8% vs last month</span>
                 </div>
@@ -209,7 +208,7 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
                 <div className={`text-xs font-extrabold uppercase tracking-wider ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
                   Live Ledger Invoices & Contracts
                 </div>
-                <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold">Double-Entry Ledger Verified</span>
+                <span className="text-[11px] text-[#548DFF] font-bold">Double-Entry Ledger Verified</span>
               </div>
 
               <div className={`overflow-x-auto rounded-2xl border ${isDark ? 'border-slate-800 bg-slate-950/80' : 'border-slate-200 bg-white'}`}>
@@ -227,14 +226,14 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
                   <tbody className={`divide-y ${isDark ? 'divide-slate-800/60' : 'divide-slate-200'} font-medium`}>
                     {invoices.map((inv) => (
                       <tr key={inv.id} className={`${isDark ? 'hover:bg-slate-900/50' : 'hover:bg-slate-50'} transition-colors`}>
-                        <td className="p-3.5 font-mono text-emerald-600 dark:text-emerald-400 font-bold">{inv.id}</td>
+                        <td className="p-3.5 font-mono text-[#548DFF] font-bold">{inv.id}</td>
                         <td className={`p-3.5 font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{inv.client}</td>
                         <td className={`p-3.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{inv.source}</td>
                         <td className={`p-3.5 font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{inv.amount}</td>
                         <td className="p-3.5">
                           <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold border ${
                             inv.status === 'Paid'
-                              ? 'bg-[#42D742]/10 text-emerald-600 dark:text-emerald-400 border-[#FFD705]/40'
+                              ? 'bg-[#FFD705]/20 text-slate-800 dark:text-[#FFD705] border-[#FFD705]/50'
                               : 'bg-amber-500/10 text-amber-600 dark:text-amber-300 border-amber-500/30'
                           }`}>
                             {inv.status}
@@ -245,8 +244,8 @@ export const OndelSection: React.FC<OndelSectionProps> = ({ theme, onOpenDemo })
                             onClick={() => toggleInvoiceStatus(inv.id)}
                             className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all ${
                               isDark 
-                                ? 'bg-slate-800 text-slate-200 hover:bg-[#42D742] hover:text-slate-950' 
-                                : 'bg-slate-100 text-slate-800 hover:bg-[#42D742] hover:text-white border border-slate-300'
+                                ? 'bg-slate-800 text-slate-200 hover:bg-[#548DFF] hover:text-white' 
+                                : 'bg-slate-100 text-slate-800 hover:bg-[#548DFF] hover:text-white border border-slate-300'
                             }`}
                           >
                             Toggle Paid Status

@@ -36,7 +36,7 @@ export const PRODUCT_BG_IMAGES: Record<ProductId, string> = {
   buzzcom: buzzcomBg,
   calendex: sectionCalendexWorking,
   ireach: sectionHrPeople,
-  ondel: ondelBg,
+  ondel: sectionStats,
   salexplex: sectionMarketingPc,
 };
 

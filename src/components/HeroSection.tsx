@@ -28,7 +28,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const [activeNode, setActiveNode] = useState<ProductId | 'plexaar'>('plexaar');
   const [isSimulating, setIsSimulating] = useState(true);
   const [activeStep, setActiveStep] = useState(0);
-  const heroBgOpacity = 30;
+  const heroBgOpacity = 40;
 
   // Simulation pulse sequence
   useEffect(() => {
@@ -126,12 +126,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
 
         {/* CINEMATIC PLEXAAR ECOSYSTEM NETWORK VISUALIZATION */}
-        <div className="mt-16 lg:mt-20 max-w-5xl mx-auto relative">
+        <div className="mt-12 lg:mt-14 max-w-5xl mx-auto relative">
           
-          <div className={`rounded-3xl p-6 sm:p-10 border ${isDark ? 'border-slate-800/80 bg-slate-950/85' : 'border-slate-200 bg-white shadow-xl'} backdrop-blur-xl relative overflow-hidden transition-all duration-300 shadow-2xl`}>
+          <div className={`rounded-3xl p-5 sm:p-7 border ${isDark ? 'border-slate-800/80 bg-slate-950/70' : 'border-white/50 bg-white/50'} backdrop-blur-xl relative overflow-hidden transition-all duration-300 shadow-2xl shadow-[#548DFF]/10`}>
+            
+            {/* Soft atmosphere so hero image + glow fill empty space */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full bg-[#548DFF]/15 blur-[80px]" />
+              <div className="absolute top-[15%] right-[10%] w-40 h-40 rounded-full bg-[#FFD705]/10 blur-[60px]" />
+            </div>
             
             {/* Control Bar */}
-            <div className={`flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-8 border-b ${isDark ? 'border-slate-800/50' : 'border-slate-200'} gap-4`}>
+            <div className={`relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between pb-4 mb-3 border-b ${isDark ? 'border-slate-800/50' : 'border-slate-200/70'} gap-4`}>
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full bg-[#42D742] animate-pulse" />
                 <span className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
@@ -145,14 +151,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 border transition-all ${
                     isSimulating 
                       ? 'bg-[#548DFF]/20 text-[#548DFF] border-[#548DFF]/30' 
-                      : 'bg-slate-100 text-[#8d8d8d] border-[#D1D1D1]'
+                      : 'bg-white/80 text-[#8d8d8d] border-[#D1D1D1]'
                   }`}
                 >
                   <Activity className={`w-3.5 h-3.5 ${isSimulating ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
                   {isSimulating ? 'Simulation Active' : 'Simulation Paused'}
                 </button>
 
-                <div className={`hidden md:flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border ${isDark ? 'text-slate-300 bg-slate-900/80 border-slate-800' : 'text-slate-700 bg-slate-100 border-slate-200'}`}>
+                <div className={`hidden md:flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-lg border ${isDark ? 'text-slate-300 bg-slate-900/80 border-slate-800' : 'text-slate-700 bg-white/80 border-slate-200'}`}>
                   <span>Active Node:</span>
                   <span className="font-bold text-[#548DFF] capitalize">{activeNode}</span>
                 </div>
@@ -160,7 +166,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* Interactive Ecosystem Map Visual */}
-            <div className="relative min-h-[420px] sm:min-h-[460px] flex items-center justify-center">
+            <div className="relative z-10 min-h-[340px] sm:min-h-[380px] flex items-center justify-center">
               
               {/* SVG Connecting Lines between Central Plexaar Core and 5 Product Nodes */}
               <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible">
@@ -174,15 +180,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
                 {/* Animated Data Stream Lines */}
                 {/* Center to Top (Buzzcom) */}
-                <line x1="50%" y1="50%" x2="50%" y2="12%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
+                <line x1="50%" y1="50%" x2="50%" y2="10%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Top-Right (Calendex) */}
-                <line x1="50%" y1="50%" x2="84%" y2="28%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
+                <line x1="50%" y1="50%" x2="82%" y2="24%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Bottom-Right (iReach) */}
-                <line x1="50%" y1="50%" x2="80%" y2="78%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
+                <line x1="50%" y1="50%" x2="80%" y2="82%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Bottom-Left (ONDEL) */}
-                <line x1="50%" y1="50%" x2="20%" y2="78%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
+                <line x1="50%" y1="50%" x2="20%" y2="82%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
                 {/* Center to Top-Left (SalexPlex) */}
-                <line x1="50%" y1="50%" x2="16%" y2="28%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
+                <line x1="50%" y1="50%" x2="18%" y2="24%" stroke="url(#lineGrad)" strokeWidth="2" strokeDasharray="6 6" className="animate-dash-flow" />
               </svg>
 
               {/* CENTER NODE: PLEXAAR OPERATING CORE */}
@@ -208,7 +214,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* TOP NODE: BUZZCOM */}
               <div 
                 onClick={() => setActiveNode('buzzcom')}
-                className={`absolute top-[4%] left-1/2 -translate-x-1/2 z-20 cursor-pointer group transition-all duration-300 ${
+                className={`absolute top-[1%] left-1/2 -translate-x-1/2 z-20 cursor-pointer group transition-all duration-300 ${
                   activeNode === 'buzzcom' || (isSimulating && activeSimulatedProduct.id === 'buzzcom') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
@@ -226,7 +232,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* TOP RIGHT NODE: CALENDEX */}
               <div 
                 onClick={() => setActiveNode('calendex')}
-                className={`absolute top-[22%] right-[2%] sm:right-[10%] z-20 cursor-pointer group transition-all duration-300 ${
+                className={`absolute top-[18%] right-[2%] sm:right-[8%] z-20 cursor-pointer group transition-all duration-300 ${
                   activeNode === 'calendex' || (isSimulating && activeSimulatedProduct.id === 'calendex') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
@@ -244,7 +250,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* BOTTOM RIGHT NODE: iREACH */}
               <div 
                 onClick={() => setActiveNode('ireach')}
-                className={`absolute bottom-[10%] right-[5%] sm:right-[12%] z-20 cursor-pointer group transition-all duration-300 ${
+                className={`absolute bottom-[6%] right-[4%] sm:right-[10%] z-20 cursor-pointer group transition-all duration-300 ${
                   activeNode === 'ireach' || (isSimulating && activeSimulatedProduct.id === 'ireach') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
@@ -262,7 +268,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* BOTTOM LEFT NODE: ONDEL */}
               <div 
                 onClick={() => setActiveNode('ondel')}
-                className={`absolute bottom-[10%] left-[5%] sm:left-[12%] z-20 cursor-pointer group transition-all duration-300 ${
+                className={`absolute bottom-[6%] left-[4%] sm:left-[10%] z-20 cursor-pointer group transition-all duration-300 ${
                   activeNode === 'ondel' || (isSimulating && activeSimulatedProduct.id === 'ondel') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
@@ -280,7 +286,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {/* TOP LEFT NODE: SALEXPLEX */}
               <div 
                 onClick={() => setActiveNode('salexplex')}
-                className={`absolute top-[22%] left-[2%] sm:left-[10%] z-20 cursor-pointer group transition-all duration-300 ${
+                className={`absolute top-[18%] left-[2%] sm:left-[8%] z-20 cursor-pointer group transition-all duration-300 ${
                   activeNode === 'salexplex' || (isSimulating && activeSimulatedProduct.id === 'salexplex') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
@@ -298,7 +304,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* LIVE CROSS-PRODUCT DATA STREAM SIMULATOR TAPE */}
-            <div className="mt-6 p-4 rounded-2xl bg-white border border-[#D1D1D1] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="relative z-10 mt-4 p-4 rounded-2xl bg-white/90 border border-[#D1D1D1] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 backdrop-blur-sm">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-xl bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white">
                   <Zap className="w-4 h-4 animate-bounce" />
