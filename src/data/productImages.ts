@@ -6,60 +6,83 @@ import salexplexBg from '../assets/images/salexplex_bg_1786104324961.jpg';
 import calendexScheduleMockup from '../assets/images/calendex_schedule_mockup_1786105284737.jpg';
 import calendexExactLaptopMobile from '../assets/images/calendex_exact_laptop_mobile_1786105606052.jpg';
 import heroEnterpriseBg from '../assets/images/hero_bg_enterprise_1786105297370.jpg';
+
+import sectionOfficeTeam from '../assets/images/sections/office-team.png';
+import sectionManagementTeam from '../assets/images/sections/management-team.png';
+import sectionCalendexWorking from '../assets/images/sections/calendex-working.png';
+import sectionHrPeople from '../assets/images/sections/hr-people.png';
+import sectionMarketingPc from '../assets/images/sections/marketing-pc.png';
+import sectionLaptopPhone from '../assets/images/sections/laptop-phone.png';
+import sectionLaptop from '../assets/images/sections/laptop.png';
+import sectionStats from '../assets/images/sections/stats-mobile.png';
+import sectionLadder from '../assets/images/sections/ladder.png';
+import sectionSupport from '../assets/images/sections/contact-support.png';
+import sectionHeroImage from '../assets/images/sections/heroimage.png';
+
 import { ProductId } from '../types';
+
+/** Fixed low opacity for readable light-theme sections */
+export const SECTION_BG_OPACITY = 0.2;
+export const PRODUCT_BG_OPACITY = 0.22;
 
 export const HERO_ENTERPRISE_BG = heroEnterpriseBg;
 export const CALENDEX_SCHEDULE_MOCKUP_IMAGE = calendexScheduleMockup;
 export const CALENDEX_EXACT_LAPTOP_MOBILE_IMAGE = calendexExactLaptopMobile;
 
+/** Product section backgrounds — product-relevant imagery */
 export const PRODUCT_BG_IMAGES: Record<ProductId, string> = {
   buzzcom: buzzcomBg,
-  calendex: calendexBg,
-  ireach: ireachBg,
+  calendex: sectionCalendexWorking,
+  ireach: sectionHrPeople,
   ondal: ondalBg,
-  salexplex: salexplexBg
+  salexplex: sectionMarketingPc,
 };
 
-// Section-specific background images (rendered at 40% opacity with readable overlays)
+/**
+ * Marketing section backgrounds mapped to section purpose
+ * (sourced from global-plexaar-com homepage assets)
+ */
 export const SECTION_BG_IMAGES = {
-  ecosystem: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80', // Connected digital enterprise network
-  customerJourney: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80', // End-to-end business process workflow
-  executiveRole: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80', // Executive boardroom leadership
-  benefits: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80', // Operational efficiency & business strategy
-  scalability: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80', // Scalable enterprise architecture
-  security: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1920&q=80', // Cyber security & data governance
-  roadmap: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1920&q=80', // Deployment roadmap & project execution
-  faq: 'https://images.unsplash.com/photo-1534536281715-e28d7674177d?auto=format&fit=crop&w=1920&q=80' // Knowledge base & technical support
+  ecosystem: sectionLaptopPhone,
+  customerJourney: sectionCalendexWorking,
+  executiveRole: sectionOfficeTeam,
+  benefits: sectionStats,
+  scalability: sectionLaptop,
+  security: sectionHeroImage,
+  roadmap: sectionLadder,
+  faq: sectionSupport,
+  management: sectionManagementTeam,
+  hr: sectionHrPeople,
+  marketing: sectionMarketingPc,
 };
 
-// High quality GIF animations / Video Previews representing product workflows
 export const PRODUCT_GIF_ANIMATIONS: Record<ProductId, { gifUrl: string; posterUrl: string; caption: string; description: string }> = {
   calendex: {
-    gifUrl: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80',
+    gifUrl: sectionCalendexWorking,
     posterUrl: calendexBg,
     caption: 'Live Multi-Staff Appointment Calendar & Auto-Scheduling Engine',
     description: 'Real-time booking matrix syncing client availability, staff rosters, and automated SMS reminders in milliseconds.'
   },
   buzzcom: {
-    gifUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+    gifUrl: sectionLaptopPhone,
     posterUrl: buzzcomBg,
     caption: 'Unified Enterprise Messaging, VoIP Calls & Live Chat Channels',
     description: 'Encrypted cross-department communication hub with integrated voice channels and instant file sharing.'
   },
   ireach: {
-    gifUrl: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    gifUrl: sectionHrPeople,
     posterUrl: ireachBg,
     caption: 'HR Workforce Attendance Radar, Shift Rosters & Payroll Stream',
     description: 'Automated employee check-in monitoring, biometric leave approvals, and multi-location staffing analytics.'
   },
   ondal: {
-    gifUrl: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+    gifUrl: sectionStats,
     posterUrl: ondalBg,
     caption: 'Real-Time Financial Ledger, Double-Entry Cashflow & Invoice Engine',
     description: 'Automated accounts receivable, multi-currency ledger reconciliation, and executive financial health dashboards.'
   },
   salexplex: {
-    gifUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+    gifUrl: sectionMarketingPc,
     posterUrl: salexplexBg,
     caption: 'Omnichannel Marketing Automation, Lead Pipelines & Conversion Funnels',
     description: 'AI-driven campaign tracking, lead scoring, and automated customer journey workflows connected to revenue.'

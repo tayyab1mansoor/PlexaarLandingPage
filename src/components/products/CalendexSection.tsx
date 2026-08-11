@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeMode, ProductId } from '../../types';
-import { PRODUCT_BG_IMAGES, PRODUCT_GIF_ANIMATIONS, CALENDEX_MOCKUP_DATA, CALENDEX_SCHEDULE_MOCKUP_IMAGE, CALENDEX_EXACT_LAPTOP_MOBILE_IMAGE } from '../../data/productImages';
+import { PRODUCT_BG_IMAGES, PRODUCT_GIF_ANIMATIONS, CALENDEX_MOCKUP_DATA, CALENDEX_SCHEDULE_MOCKUP_IMAGE, CALENDEX_EXACT_LAPTOP_MOBILE_IMAGE, PRODUCT_BG_OPACITY } from '../../data/productImages';
 import { 
   Calendar, 
   Clock, 
@@ -11,7 +11,6 @@ import {
   Monitor,
   Smartphone,
   Sparkles,
-  SlidersHorizontal,
   Users,
   Megaphone,
   ShoppingCart,
@@ -39,7 +38,6 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
   const [viewMode, setViewMode] = useState<'day' | 'week' | 'month'>('week');
   const [selectedSlot, setSelectedSlot] = useState<string | null>('02:00 PM');
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
-  const [bgOpacity, setBgOpacity] = useState<number>(40);
 
   const isDark = theme === 'dark';
   const calendexBgImage = PRODUCT_BG_IMAGES.calendex;
@@ -47,19 +45,16 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
   return (
     <section id="product-calendex" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
-      {/* Product Background Image */}
+      {/* Product-matched background */}
       <img 
         src={calendexBgImage} 
-        alt="Calendex Background"
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-500"
-        style={{ opacity: bgOpacity / 100 }}
-        onError={(e) => {
-          e.currentTarget.src = 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1920&q=80';
-        }}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        style={{ opacity: PRODUCT_BG_OPACITY }}
       />
       
       {/* Soft overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-slate-50/60 via-slate-50/40 to-slate-50'} pointer-events-none`} />
+      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-[#fbfcff]/75 via-[#fbfcff]/55 to-[#fbfcff]/90'} pointer-events-none`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         

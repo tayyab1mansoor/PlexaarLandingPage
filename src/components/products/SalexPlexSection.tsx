@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ThemeMode, ProductId } from '../../types';
-import { PRODUCT_BG_IMAGES, PRODUCT_GIF_ANIMATIONS } from '../../data/productImages';
+import { PRODUCT_BG_IMAGES, PRODUCT_GIF_ANIMATIONS, PRODUCT_BG_OPACITY } from '../../data/productImages';
 import { 
   Megaphone, 
   Target, 
@@ -11,7 +11,6 @@ import {
   Zap,
   Sparkles,
   Layers,
-  SlidersHorizontal,
   Activity,
   Play,
   Pause,
@@ -28,7 +27,6 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
   const [activeTab, setActiveTab] = useState<'animatedGif' | 'interactiveFunnel'>('animatedGif');
   const [isPlayingGif, setIsPlayingGif] = useState(true);
   const [activeCampaign, setActiveCampaign] = useState(0);
-  const [bgOpacity, setBgOpacity] = useState<number>(40);
 
   const campaigns = [
     { name: 'Global Enterprise Digital Portal', leads: '1,420', cta: '4.8x ROI', reach: '480K Views', status: 'Active' },
@@ -48,10 +46,10 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
         className="absolute inset-0 bg-cover bg-center pointer-events-none transition-opacity duration-500"
         style={{ 
           backgroundImage: `url(${salexplexBgImage})`, 
-          opacity: bgOpacity / 100 
+          opacity: PRODUCT_BG_OPACITY 
         }}
       />
-      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-slate-50/60 via-slate-50/40 to-slate-50'} pointer-events-none`} />
+      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-[#fbfcff]/75 via-[#fbfcff]/55 to-[#fbfcff]/90'} pointer-events-none`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -74,20 +72,6 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
-            {/* Opacity Control Pill */}
-            <div className={`px-3.5 py-2 rounded-xl ${isDark ? 'bg-slate-900/90 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-700 shadow-sm'} border text-xs font-bold flex items-center gap-2.5`}>
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#548DFF]" />
-              <span className={`text-[11px] whitespace-nowrap ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>BG Opacity: {bgOpacity}%</span>
-              <input 
-                type="range" 
-                min="10" 
-                max="80" 
-                value={bgOpacity} 
-                onChange={(e) => setBgOpacity(Number(e.target.value))}
-                className="w-16 accent-[#548DFF] cursor-pointer"
-              />
-            </div>
-
             <button
               onClick={() => onOpenDemo('salexplex')}
               className="px-6 py-3 rounded-xl text-sm font-bold bg-[#548DFF] hover:bg-[#5B7CFD] text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#4294FF]/20 shrink-0"

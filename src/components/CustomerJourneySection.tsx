@@ -44,12 +44,12 @@ export const CustomerJourneySection: React.FC<CustomerJourneySectionProps> = ({
   return (
     <section id="journey" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
-      {/* Section Background Image with 40% Opacity */}
+      {/* Section background (soft, section-matched) */}
       <div 
-        className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-40 transition-all duration-500"
+        className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-20 transition-all duration-500"
         style={{ backgroundImage: `url(${SECTION_BG_IMAGES.customerJourney})` }}
       />
-      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-slate-50/60 via-slate-50/40 to-slate-50'} pointer-events-none`} />
+      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-[#fbfcff]/80 via-[#fbfcff]/60 to-[#fbfcff]/92'} pointer-events-none`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
