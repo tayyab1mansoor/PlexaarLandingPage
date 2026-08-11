@@ -170,7 +170,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2 border transition-all ${
                     isSimulating 
                       ? 'bg-[#548DFF]/20 text-[#548DFF] border-[#548DFF]/30' 
-                      : 'bg-slate-800 text-slate-400 border-slate-700'
+                      : 'bg-slate-100 text-[#8d8d8d] border-[#D1D1D1]'
                   }`}
                 >
                   <Activity className={`w-3.5 h-3.5 ${isSimulating ? 'animate-spin' : ''}`} style={{ animationDuration: '6s' }} />
@@ -191,7 +191,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-visible">
                 <defs>
                   <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#6366f1" stopOpacity="0.8" />
+                    <stop offset="0%" stopColor="#0575E6" stopOpacity="0.8" />
                     <stop offset="50%" stopColor="#548DFF" stopOpacity="0.9" />
                     <stop offset="100%" stopColor="#5B7CFD" stopOpacity="0.8" />
                   </linearGradient>
@@ -217,13 +217,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'plexaar' ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="relative flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-slate-950 border-2 border-[#548DFF]/80 shadow-2xl shadow-[#548DFF]/50 p-2">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#548DFF]/30 via-[#548DFF]/15 to-[#548DFF]/30 animate-spin" style={{ animationDuration: '20s' }} />
-                  <div className="w-full h-full rounded-full bg-slate-900 flex flex-col items-center justify-center p-2 relative z-10 text-center border border-slate-700">
+                <div className="relative flex items-center justify-center w-28 h-28 sm:w-36 sm:h-36 rounded-full bg-white border-2 border-[#548DFF] shadow-xl shadow-[#548DFF]/25 p-2">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#548DFF]/15 via-transparent to-[#FFD705]/10 animate-spin" style={{ animationDuration: '20s' }} />
+                  <div className="w-full h-full rounded-full bg-[#fbfcff] flex flex-col items-center justify-center p-2.5 relative z-10 text-center border border-[#548DFF]/20">
                     <img
                       src={PLEXAAR_HEADER_LOGO}
                       alt="Plexaar"
-                      className="h-8 sm:h-10 w-auto mb-1 object-contain"
+                      className="h-7 sm:h-9 w-auto object-contain mb-1"
                     />
                     <span className="text-[9px] font-bold text-[#548DFF] tracking-widest uppercase">CORE</span>
                   </div>
@@ -237,13 +237,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'buzzcom' || (isSimulating && activeSimulatedProduct.id === 'buzzcom') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 border border-[#548DFF]/50 shadow-xl shadow-[#548DFF]/20 hover:border-[#548DFF] transition-all">
-                  <div className="p-1.5 rounded-xl bg-[#548DFF]/20 border border-[#548DFF]/30">
-                    <img src={PRODUCT_LOGOS.buzzcom} alt="Buzzcom" className="w-6 h-6 object-contain" />
+                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#548DFF]/35 shadow-md shadow-[#548DFF]/10 hover:border-[#548DFF] hover:shadow-lg hover:shadow-[#548DFF]/15 transition-all">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#548DFF]/20 shadow-sm shrink-0 bg-white flex items-center justify-center">
+                    <img src={PRODUCT_LOGOS.buzzcom} alt="Buzzcom" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-white group-hover:text-[#548DFF]">BUZZCOM</div>
-                    <div className="text-[10px] text-slate-300 font-medium">Communication</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#548DFF]">BUZZCOM</div>
+                    <div className="text-[10px] text-[#8d8d8d] font-medium">Communication</div>
                   </div>
                 </div>
               </div>
@@ -255,13 +255,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'calendex' || (isSimulating && activeSimulatedProduct.id === 'calendex') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 border border-[#5B7CFD]/50 shadow-xl shadow-[#5B7CFD]/20 hover:border-[#5B7CFD] transition-all">
-                  <div className="p-1.5 rounded-xl bg-[#5B7CFD]/20 border border-[#5B7CFD]/30">
-                    <img src={PRODUCT_LOGOS.calendex} alt="Calendex" className="w-6 h-6 object-contain" />
+                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#5B7CFD]/35 shadow-md shadow-[#5B7CFD]/10 hover:border-[#5B7CFD] hover:shadow-lg transition-all">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#5B7CFD]/20 shadow-sm shrink-0 bg-white flex items-center justify-center">
+                    <img src={PRODUCT_LOGOS.calendex} alt="Calendex" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-white group-hover:text-[#5B7CFD]">CALENDEX</div>
-                    <div className="text-[10px] text-slate-300 font-medium">Appointments</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#5B7CFD]">CALENDEX</div>
+                    <div className="text-[10px] text-[#8d8d8d] font-medium">Appointments</div>
                   </div>
                 </div>
               </div>
@@ -273,13 +273,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'ireach' || (isSimulating && activeSimulatedProduct.id === 'ireach') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 border border-[#0575E6]/50 shadow-xl shadow-[#0575E6]/20 hover:border-[#0575E6] transition-all">
-                  <div className="p-1.5 rounded-xl bg-[#0575E6]/20 border border-[#0575E6]/30">
-                    <img src={PRODUCT_LOGOS.ireach} alt="iReach" className="w-6 h-6 object-contain" />
+                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#0575E6]/35 shadow-md shadow-[#0575E6]/10 hover:border-[#0575E6] hover:shadow-lg transition-all">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#0575E6]/20 shadow-sm shrink-0 bg-white flex items-center justify-center">
+                    <img src={PRODUCT_LOGOS.ireach} alt="iReach" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-white group-hover:text-[#0575E6]">iREACH</div>
-                    <div className="text-[10px] text-slate-300 font-medium">HR / People</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#0575E6]">iREACH</div>
+                    <div className="text-[10px] text-[#8d8d8d] font-medium">HR / People</div>
                   </div>
                 </div>
               </div>
@@ -291,13 +291,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'ondal' || (isSimulating && activeSimulatedProduct.id === 'ondal') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 border border-[#FFD705]/50 shadow-xl shadow-[#FFD705]/20 hover:border-[#FFD705] transition-all">
-                  <div className="p-1.5 rounded-xl bg-[#FFD705]/20 border border-[#FFD705]/40">
-                    <img src={PRODUCT_LOGOS.ondal} alt="Ondal" className="w-6 h-6 object-contain" />
+                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#FFD705]/50 shadow-md shadow-[#FFD705]/15 hover:border-[#FFD705] hover:shadow-lg transition-all">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#FFD705]/40 shadow-sm shrink-0 bg-white flex items-center justify-center">
+                    <img src={PRODUCT_LOGOS.ondal} alt="Ondal" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-white group-hover:text-[#FFD705]">ONDAL</div>
-                    <div className="text-[10px] text-slate-300 font-medium">Finance</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#0575E6]">ONDAL</div>
+                    <div className="text-[10px] text-[#8d8d8d] font-medium">Finance</div>
                   </div>
                 </div>
               </div>
@@ -309,13 +309,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   activeNode === 'salexplex' || (isSimulating && activeSimulatedProduct.id === 'salexplex') ? 'scale-110' : 'hover:scale-105'
                 }`}
               >
-                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-900 border border-[#4294FF]/50 shadow-xl shadow-[#4294FF]/20 hover:border-[#4294FF] transition-all">
-                  <div className="p-1.5 rounded-xl bg-[#4294FF]/20 border border-[#4294FF]/30">
-                    <img src={PRODUCT_LOGOS.salexplex} alt="SalexPlex" className="w-6 h-6 object-contain" />
+                <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#4294FF]/35 shadow-md shadow-[#4294FF]/10 hover:border-[#4294FF] hover:shadow-lg transition-all">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#4294FF]/20 shadow-sm shrink-0 bg-white flex items-center justify-center">
+                    <img src={PRODUCT_LOGOS.salexplex} alt="SalexPlex" className="w-5 h-5 object-contain" />
                   </div>
                   <div className="text-left hidden sm:block">
-                    <div className="text-xs font-black text-white group-hover:text-[#4294FF]">SALEXPLEX</div>
-                    <div className="text-[10px] text-slate-300 font-medium">Marketing</div>
+                    <div className="text-xs font-black text-[#131313] group-hover:text-[#4294FF]">SALEXPLEX</div>
+                    <div className="text-[10px] text-[#8d8d8d] font-medium">Marketing</div>
                   </div>
                 </div>
               </div>
@@ -323,19 +323,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             {/* LIVE CROSS-PRODUCT DATA STREAM SIMULATOR TAPE */}
-            <div className="mt-6 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="mt-6 p-4 rounded-2xl bg-white border border-[#D1D1D1] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-gradient-to-r from-[#548DFF] to-[#6BA0FF] text-white">
+                <div className="p-2 rounded-xl bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white">
                   <Zap className="w-4 h-4 animate-bounce" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white flex items-center gap-2">
+                  <div className="text-xs font-bold text-[#131313] flex items-center gap-2">
                     <span>Ecosystem Data Stream:</span>
-                    <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#548DFF]/20 text-[#548DFF] border border-[#548DFF]/30">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-[#548DFF]/10 text-[#548DFF] border border-[#548DFF]/25">
                       {activeSimulatedProduct.name}
                     </span>
                   </div>
-                  <p className="text-xs text-slate-300 mt-0.5">
+                  <p className="text-xs text-[#8d8d8d] mt-0.5">
                     {activeSimulatedProduct.tagline}
                   </p>
                 </div>
@@ -344,7 +344,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => onNavigateTo(`product-${activeSimulatedProduct.id}`)}
-                  className="px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-[#548DFF] border border-slate-700 transition-all flex items-center gap-1.5"
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-[#548DFF]/10 hover:bg-[#548DFF] text-[#548DFF] hover:text-white border border-[#548DFF]/30 transition-all flex items-center gap-1.5"
                 >
                   <span>Explore {activeSimulatedProduct.name}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -359,7 +359,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="mt-16 max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#548DFF]">PRODUCT BACKGROUND SHOWCASE</span>
-            <h3 className="text-2xl font-black text-white mt-1">Explore High-Resolution Product Backgrounds</h3>
+            <h3 className="text-2xl font-black text-[#131313] mt-1">Explore High-Resolution Product Backgrounds</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -369,27 +369,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 <div 
                   key={prod.id}
                   onClick={() => onNavigateTo(`product-${prod.id}`)}
-                  className="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900/90 hover:border-[#548DFF]/50 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-[#548DFF]/20 flex flex-col justify-between h-56"
+                  className="group relative rounded-2xl overflow-hidden border border-[#D1D1D1] bg-white hover:border-[#548DFF]/50 transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:shadow-[#548DFF]/15 flex flex-col justify-between h-56"
                 >
                   {/* Background Image */}
                   <div 
-                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-80"
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500 opacity-50 group-hover:opacity-70"
                     style={{ backgroundImage: `url(${bgImg})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-white/70 to-white/20" />
 
                   <div className="relative z-10 p-5 flex items-start justify-between">
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-950/80 border border-slate-700 text-[#548DFF]">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-white/90 border border-[#548DFF]/25 text-[#548DFF]">
                       {prod.category}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-white opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-[#548DFF] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                   </div>
 
                   <div className="relative z-10 p-5 space-y-1">
-                    <h4 className="text-lg font-black text-white group-hover:text-[#548DFF] transition-colors">
+                    <h4 className="text-lg font-black text-[#131313] group-hover:text-[#548DFF] transition-colors">
                       {prod.name}
                     </h4>
-                    <p className="text-xs text-slate-300 line-clamp-2">
+                    <p className="text-xs text-[#8d8d8d] line-clamp-2">
                       {prod.tagline}
                     </p>
                   </div>

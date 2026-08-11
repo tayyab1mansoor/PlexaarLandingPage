@@ -13,7 +13,9 @@ export const QuickNavPills: React.FC<QuickNavPillsProps> = ({ theme, onNavigateT
   const isDark = theme === 'dark';
 
   const getPillIcon = (id: ProductId) => (
-    <img src={PRODUCT_LOGOS[id]} alt="" className="w-4 h-4 object-contain" />
+    <span className="inline-flex w-6 h-6 rounded-full overflow-hidden border border-[#548DFF]/20 shrink-0 bg-white items-center justify-center">
+      <img src={PRODUCT_LOGOS[id]} alt="" className="w-4 h-4 object-contain" />
+    </span>
   );
 
   const getPillAction = (id: string) => {

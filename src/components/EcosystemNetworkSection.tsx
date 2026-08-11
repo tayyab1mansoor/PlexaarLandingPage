@@ -26,11 +26,13 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
   const selectedProdInfo = PLEXAAR_PRODUCTS.find((p) => p.id === hoveredProduct) || PLEXAAR_PRODUCTS[0];
 
   const getProductIcon = (id: ProductId) => (
-    <img
-      src={PRODUCT_LOGOS[id]}
-      alt=""
-      className="w-5 h-5 object-contain"
-    />
+    <span className="inline-flex w-8 h-8 rounded-full overflow-hidden border border-[#548DFF]/20 shadow-sm shrink-0 bg-white items-center justify-center">
+      <img
+        src={PRODUCT_LOGOS[id]}
+        alt=""
+        className="w-5 h-5 object-contain"
+      />
+    </span>
   );
 
   return (
