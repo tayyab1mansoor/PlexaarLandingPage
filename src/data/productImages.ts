@@ -8,17 +8,20 @@ import calendexExactLaptopMobile from '../assets/images/calendex_exact_laptop_mo
 import heroEnterpriseBg from '../assets/images/hero_bg_enterprise_1786105297370.jpg';
 import heroSectionBg from '../assets/images/herosection.png';
 
-import sectionOfficeTeam from '../assets/images/sections/office-team.png';
-import sectionManagementTeam from '../assets/images/sections/management-team.png';
-import sectionCalendexWorking from '../assets/images/sections/calendex-working.png';
-import sectionHrPeople from '../assets/images/sections/hr-people.png';
-import sectionMarketingPc from '../assets/images/sections/marketing-pc.png';
-import sectionLaptopPhone from '../assets/images/sections/laptop-phone.png';
-import sectionLaptop from '../assets/images/sections/laptop.png';
-import sectionStats from '../assets/images/sections/stats-mobile.png';
-import sectionLadder from '../assets/images/sections/ladder.png';
-import sectionSupport from '../assets/images/sections/contact-support.png';
-import sectionHeroImage from '../assets/images/sections/heroimage.png';
+import unsplashBuzzcom from '../assets/images/sections/unsplash-buzzcom.jpg';
+import unsplashCalendex from '../assets/images/sections/unsplash-calendex.jpg';
+import unsplashIreach from '../assets/images/sections/unsplash-ireach.jpg';
+import unsplashOndel from '../assets/images/sections/unsplash-ondel.jpg';
+import unsplashSalexplex from '../assets/images/sections/unsplash-salexplex.jpg';
+import unsplashEcosystem from '../assets/images/sections/unsplash-ecosystem.jpg';
+import unsplashJourney from '../assets/images/sections/unsplash-journey.jpg';
+import unsplashExecutive from '../assets/images/sections/unsplash-executive.jpg';
+import unsplashBenefits from '../assets/images/sections/unsplash-benefits.jpg';
+import unsplashScalability from '../assets/images/sections/unsplash-scalability.jpg';
+import unsplashSecurity from '../assets/images/sections/unsplash-security.jpg';
+import unsplashRoadmap from '../assets/images/sections/unsplash-roadmap.jpg';
+import unsplashFaq from '../assets/images/sections/unsplash-faq.jpg';
+import unsplashManagement from '../assets/images/sections/unsplash-management.jpg';
 
 import { ProductId } from '../types';
 
@@ -31,60 +34,59 @@ export const HERO_SECTION_BG = heroSectionBg;
 export const CALENDEX_SCHEDULE_MOCKUP_IMAGE = calendexScheduleMockup;
 export const CALENDEX_EXACT_LAPTOP_MOBILE_IMAGE = calendexExactLaptopMobile;
 
-/** Product section backgrounds — product-relevant imagery */
+/** Product section backgrounds — fresh Unsplash imagery */
 export const PRODUCT_BG_IMAGES: Record<ProductId, string> = {
-  buzzcom: buzzcomBg,
-  calendex: sectionCalendexWorking,
-  ireach: sectionHrPeople,
-  ondel: sectionStats,
-  salexplex: sectionMarketingPc,
+  buzzcom: unsplashBuzzcom,
+  calendex: unsplashCalendex,
+  ireach: unsplashIreach,
+  ondel: unsplashOndel,
+  salexplex: unsplashSalexplex,
 };
 
 /**
  * Marketing section backgrounds mapped to section purpose
- * (sourced from global-plexaar-com homepage assets)
  */
 export const SECTION_BG_IMAGES = {
-  ecosystem: sectionLaptopPhone,
-  customerJourney: sectionCalendexWorking,
-  executiveRole: sectionOfficeTeam,
-  benefits: sectionStats,
-  scalability: sectionLaptop,
-  security: sectionHeroImage,
-  roadmap: sectionLadder,
-  faq: sectionSupport,
-  management: sectionManagementTeam,
-  hr: sectionHrPeople,
-  marketing: sectionMarketingPc,
+  ecosystem: unsplashEcosystem,
+  customerJourney: unsplashJourney,
+  executiveRole: unsplashExecutive,
+  benefits: unsplashBenefits,
+  scalability: unsplashScalability,
+  security: unsplashSecurity,
+  roadmap: unsplashRoadmap,
+  faq: unsplashFaq,
+  management: unsplashManagement,
+  hr: unsplashIreach,
+  marketing: unsplashSalexplex,
 };
 
 export const PRODUCT_GIF_ANIMATIONS: Record<ProductId, { gifUrl: string; posterUrl: string; caption: string; description: string }> = {
   calendex: {
-    gifUrl: sectionCalendexWorking,
+    gifUrl: unsplashCalendex,
     posterUrl: calendexBg,
     caption: 'Live Multi-Staff Appointment Calendar & Auto-Scheduling Engine',
     description: 'Real-time booking matrix syncing client availability, staff rosters, and automated SMS reminders in milliseconds.'
   },
   buzzcom: {
-    gifUrl: sectionLaptopPhone,
+    gifUrl: unsplashBuzzcom,
     posterUrl: buzzcomBg,
     caption: 'Unified Enterprise Messaging, VoIP Calls & Live Chat Channels',
     description: 'Encrypted cross-department communication hub with integrated voice channels and instant file sharing.'
   },
   ireach: {
-    gifUrl: sectionHrPeople,
+    gifUrl: unsplashIreach,
     posterUrl: ireachBg,
     caption: 'HR Workforce Attendance Radar, Shift Rosters & Payroll Stream',
     description: 'Automated employee check-in monitoring, biometric leave approvals, and multi-location staffing analytics.'
   },
   ondel: {
-    gifUrl: sectionStats,
+    gifUrl: unsplashOndel,
     posterUrl: ondelBg,
     caption: 'Real-Time Financial Ledger, Double-Entry Cashflow & Invoice Engine',
     description: 'Automated accounts receivable, multi-currency ledger reconciliation, and executive financial health dashboards.'
   },
   salexplex: {
-    gifUrl: sectionMarketingPc,
+    gifUrl: unsplashSalexplex,
     posterUrl: salexplexBg,
     caption: 'Omnichannel Marketing Automation, Lead Pipelines & Conversion Funnels',
     description: 'AI-driven campaign tracking, lead scoring, and automated customer journey workflows connected to revenue.'
