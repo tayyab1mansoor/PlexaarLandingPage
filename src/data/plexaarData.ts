@@ -75,7 +75,7 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
   },
   {
     id: 'ondel',
-    name: 'ONDEL',
+    name: 'Ondel',
     tagline: 'Financial Visibility Built Into Your Business.',
     category: 'FINANCE & FINANCIAL MANAGEMENT',
     description: 'Command center for real-time revenue tracking, automated invoicing, expense classification, ledger streams, and cash flow forecasting.',
@@ -164,7 +164,7 @@ export const JOURNEY_STEPS: JourneyStep[] = [
     stepNumber: '05',
     title: 'Automated Financial Settlement',
     productId: 'ondel',
-    productName: 'ONDEL',
+    productName: 'Ondel',
     action: 'Financial Management',
     description: 'ONDEL generates the invoice automatically upon appointment completion, processing payment and logging revenue to the central ledger.',
     iconName: 'TrendingUp'

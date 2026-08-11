@@ -92,17 +92,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               {/* Mega Menu Dropdown */}
               {activeMenu === 'products' && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] p-6 rounded-2xl shadow-2xl transition-all duration-200 border animate-in fade-in slide-in-from-top-2 z-50 glass-panel-light border-slate-200 bg-white">
-                  <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200">
-                    <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-[#548DFF]" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                        Plexaar Product Ecosystem (5 Connected Apps)
+                <div className="absolute top-full left-0 mt-2 w-[min(820px,calc(100vw-2rem))] p-6 rounded-2xl shadow-2xl transition-all duration-200 border animate-in fade-in slide-in-from-top-2 z-50 glass-panel-light border-slate-200 bg-white">
+                  <div className="flex items-center justify-between gap-4 pb-4 mb-4 border-b border-slate-200">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <Sparkles className="w-4 h-4 text-[#548DFF] shrink-0" />
+                      <span className="text-xs font-bold uppercase tracking-wider text-slate-500 truncate">
+                        Product Ecosystem (5 Connected Apps)
                       </span>
                     </div>
                     <button 
                       onClick={() => { setActiveMenu(null); onNavigateTo('product-buzzcom'); }}
-                      className="text-xs font-semibold text-[#548DFF] hover:text-[#0575E6] flex items-center gap-1 group"
+                      className="text-xs font-semibold text-[#548DFF] hover:text-[#0575E6] flex items-center gap-1 group shrink-0 whitespace-nowrap"
                     >
                       Explore All Products
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -147,7 +147,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     {/* Integrated Core Hub Card */}
                     <div 
                       onClick={() => { setActiveMenu(null); onNavigateTo('product-buzzcom'); }}
-                      className="p-3.5 rounded-xl border border-[#548DFF]/30 bg-gradient-to-r from-[#548DFF]/10 to-[#548DFF]/5 hover:border-[#548DFF]/60 cursor-pointer transition-all duration-200 flex items-center gap-3 group"
+                      className="col-span-2 p-3.5 rounded-xl border border-[#548DFF]/30 bg-gradient-to-r from-[#548DFF]/10 to-[#548DFF]/5 hover:border-[#548DFF]/60 cursor-pointer transition-all duration-200 flex items-center gap-3 group"
                     >
                       <div className="p-2.5 rounded-lg bg-white border border-[#548DFF]/30">
                         <img src={PLEXAAR_HEADER_LOGO} alt="Plexaar" className="h-5 w-auto object-contain" />
