@@ -25,13 +25,13 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ theme, onOpenD
       title: 'CONNECTED OPERATIONS',
       desc: 'Bring critical business functions—chat, scheduling, HR, finance, and marketing—into one unified ecosystem.',
       icon: Zap,
-      color: 'text-cyan-400'
+      color: 'text-[#548DFF]'
     },
     {
       title: 'BETTER VISIBILITY',
       desc: 'Understand what is happening across your entire organization with real-time cross-department analytics.',
       icon: Eye,
-      color: 'text-purple-400'
+      color: 'text-[#548DFF]'
     },
     {
       title: 'LESS FRAGMENTATION',
@@ -60,7 +60,7 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ theme, onOpenD
   ];
 
   return (
-    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -72,13 +72,13 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ theme, onOpenD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
             WHY ONE ECOSYSTEM?
           </div>
 
           <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             Stop Managing Software.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 dark:from-cyan-400 dark:via-indigo-300 dark:to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
               Start Managing Your Business.
             </span>
           </h2>
@@ -118,7 +118,7 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ theme, onOpenD
                   isDark ? 'border-slate-800/80 text-slate-400' : 'border-slate-200 text-slate-500'
                 }`}>
                   <span>Plexaar Standard</span>
-                  <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+                  <CheckCircle2 className="w-4 h-4 text-[#548DFF]" />
                 </div>
               </div>
             );
@@ -128,7 +128,7 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ theme, onOpenD
         <div className="mt-12 text-center">
           <button
             onClick={onOpenDemo}
-            className="px-8 py-4 rounded-xl text-sm font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 text-white shadow-xl shadow-indigo-500/25 hover:scale-105 transition-all inline-flex items-center gap-2"
+            className="px-8 py-4 rounded-xl text-sm font-bold bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white shadow-xl shadow-[#548DFF]/25 hover:scale-105 transition-all inline-flex items-center gap-2"
           >
             <span>Transform Your Operations Today</span>
             <ArrowRight className="w-4 h-4" />

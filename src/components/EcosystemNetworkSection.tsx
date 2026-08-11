@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { PLEXAAR_PRODUCTS } from '../data/plexaarData';
 import { SECTION_BG_IMAGES } from '../data/productImages';
+import { PRODUCT_LOGOS } from '../data/productLogos';
 import { ThemeMode, ProductId } from '../types';
 import { 
-  MessageSquare, 
-  Calendar, 
-  Users, 
-  TrendingUp, 
-  Megaphone, 
-  Cpu, 
   ArrowRight, 
   Sparkles,
-  Layers,
   CheckCircle2
 } from 'lucide-react';
 
@@ -31,19 +25,16 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
 
   const selectedProdInfo = PLEXAAR_PRODUCTS.find((p) => p.id === hoveredProduct) || PLEXAAR_PRODUCTS[0];
 
-  const getProductIcon = (id: string) => {
-    switch (id) {
-      case 'buzzcom': return <MessageSquare className="w-5 h-5 text-cyan-400" />;
-      case 'calendex': return <Calendar className="w-5 h-5 text-purple-400" />;
-      case 'ireach': return <Users className="w-5 h-5 text-blue-400" />;
-      case 'ondal': return <TrendingUp className="w-5 h-5 text-emerald-400" />;
-      case 'salexplex': return <Megaphone className="w-5 h-5 text-pink-400" />;
-      default: return <Layers className="w-5 h-5 text-indigo-400" />;
-    }
-  };
+  const getProductIcon = (id: ProductId) => (
+    <img
+      src={PRODUCT_LOGOS[id]}
+      alt=""
+      className="w-5 h-5 object-contain"
+    />
+  );
 
   return (
-    <section id="ecosystem" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="ecosystem" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -54,20 +45,20 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
 
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none opacity-30">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-tr from-indigo-600 via-cyan-500 to-purple-600 rounded-full blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-gradient-to-tr from-[#0575E6] via-[#548DFF] to-[#5B7CFD] rounded-full blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
+            <Sparkles className="w-3.5 h-3.5 text-[#548DFF]" />
             UNIFIED PLATFORM ARCHITECTURE
           </div>
 
           <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             Five Powerful Products.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 dark:from-cyan-400 dark:via-indigo-300 dark:to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
               One Connected Business.
             </span>
           </h2>
@@ -92,8 +83,8 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
                   className={`p-4 rounded-2xl border transition-all duration-300 cursor-pointer flex items-center justify-between gap-4 ${
                     isSelected
                       ? isDark 
-                        ? 'bg-slate-900 border-cyan-500/80 shadow-xl shadow-cyan-500/10 scale-[1.02]' 
-                        : 'bg-white border-cyan-500 shadow-xl shadow-cyan-500/10 scale-[1.02]'
+                        ? 'bg-slate-900 border-[#548DFF]/80 shadow-xl shadow-[#548DFF]/10 scale-[1.02]' 
+                        : 'bg-white border-[#548DFF] shadow-xl shadow-[#548DFF]/10 scale-[1.02]'
                       : isDark
                       ? 'bg-slate-950/60 border-slate-800 hover:border-slate-700 opacity-80 hover:opacity-100'
                       : 'bg-white/80 border-slate-200 hover:border-slate-300 shadow-sm opacity-90 hover:opacity-100'
@@ -110,7 +101,7 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
                       <div className={`text-xs font-extrabold uppercase tracking-widest ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                         {prod.category}
                       </div>
-                      <div className={`text-lg font-bold ${isDark ? 'text-white' : 'text-slate-900'} group-hover:text-cyan-500`}>
+                      <div className={`text-lg font-bold ${isDark ? 'text-white' : 'text-slate-900'} group-hover:text-[#548DFF]`}>
                         {prod.name}
                       </div>
                     </div>
@@ -123,7 +114,7 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
                     >
                       {prod.metrics[0].label}: {prod.metrics[0].value}
                     </span>
-                    <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-cyan-500 translate-x-1' : 'text-slate-400'}`} />
+                    <ArrowRight className={`w-4 h-4 transition-transform ${isSelected ? 'text-[#548DFF] translate-x-1' : 'text-slate-400'}`} />
                   </div>
                 </div>
               );
@@ -183,7 +174,7 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
                       <div key={idx} className={`flex items-center gap-2 text-xs font-semibold p-2.5 rounded-xl border ${
                         isDark ? 'text-slate-300 bg-slate-950/60 border-slate-800' : 'text-slate-800 bg-slate-50 border-slate-200'
                       }`}>
-                        <CheckCircle2 className="w-4 h-4 shrink-0 text-cyan-500" />
+                        <CheckCircle2 className="w-4 h-4 shrink-0 text-[#548DFF]" />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -219,7 +210,7 @@ export const EcosystemNetworkSection: React.FC<EcosystemNetworkSectionProps> = (
 
                   <button
                     onClick={() => onOpenDemo(selectedProdInfo.id)}
-                    className="flex-1 sm:flex-none px-5 py-3 rounded-xl text-xs font-bold bg-gradient-to-r from-indigo-600 to-cyan-500 text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all"
+                    className="flex-1 sm:flex-none px-5 py-3 rounded-xl text-xs font-bold bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white shadow-lg shadow-[#548DFF]/25 hover:shadow-[#548DFF]/40 transition-all"
                   >
                     Request Demo
                   </button>

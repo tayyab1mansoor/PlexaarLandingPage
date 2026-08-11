@@ -45,7 +45,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
   const calendexBgImage = PRODUCT_BG_IMAGES.calendex;
 
   return (
-    <section id="product-calendex" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="product-calendex" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Product Background Image */}
       <img 
@@ -66,13 +66,13 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
         {/* Header */}
         <div className={`flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pb-12 border-b ${isDark ? 'border-slate-800/80' : 'border-slate-200'}`}>
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 bg-purple-500/10 border border-purple-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-[#548DFF] bg-purple-500/10 border border-purple-500/20">
               <Calendar className="w-3.5 h-3.5 text-purple-500" />
               CALENDEX — APPOINTMENT & BOOKING SYSTEM
             </div>
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Enterprise Appointment Platform{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-600 dark:from-purple-400 dark:via-indigo-300 dark:to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
                 Live Multi-Staff Matrix.
               </span>
             </h2>
@@ -84,7 +84,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             <button
               onClick={() => onOpenDemo('calendex')}
-              className="px-6 py-3.5 rounded-xl text-sm font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white transition-all flex items-center justify-center gap-2 shadow-xl shadow-indigo-500/25 shrink-0"
+              className="px-6 py-3.5 rounded-xl text-sm font-bold bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] hover:from-[#0575E6] hover:to-[#548DFF] text-white transition-all flex items-center justify-center gap-2 shadow-xl shadow-[#548DFF]/25 shrink-0"
             >
               <span>Launch Calendex Live Demo</span>
               <ArrowRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Monitor className="w-4 h-4 text-cyan-400" />
+              <Monitor className="w-4 h-4 text-[#548DFF]" />
               <span>Exact White Laptop + Mobile Replica</span>
             </button>
 
@@ -115,7 +115,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <ImageIcon className="w-4 h-4 text-purple-400" />
+              <ImageIcon className="w-4 h-4 text-[#548DFF]" />
               <span>High-Res Photo Render</span>
             </button>
 
@@ -123,7 +123,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
               onClick={() => setActiveTab('interactiveSimulator')}
               className={`px-4 py-2.5 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 ${
                 activeTab === 'interactiveSimulator'
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-500/30'
+                  ? 'bg-[#548DFF] text-white shadow-lg shadow-[#548DFF]/30'
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -155,7 +155,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
               </div>
 
               {/* Main Laptop Screen (Bright White Enterprise SaaS Interface) */}
-              <div className="rounded-2xl bg-white text-slate-900 overflow-hidden shadow-2xl border border-slate-300 grid grid-cols-12 min-h-[520px]">
+              <div className="rounded-2xl bg-white text-[#131313] overflow-hidden shadow-2xl border border-slate-300 grid grid-cols-12 min-h-[520px]">
                 
                 {/* Left Blue Sidebar */}
                 <div className="col-span-12 lg:col-span-2 bg-[#2563eb] text-white p-4 flex flex-col justify-between space-y-6">
@@ -361,17 +361,17 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                   <div className="space-y-4">
                     <div className="flex items-center justify-between border-b border-slate-800 pb-2">
                       <div className="flex items-center gap-2">
-                        <Smartphone className="w-4 h-4 text-cyan-400" />
+                        <Smartphone className="w-4 h-4 text-[#548DFF]" />
                         <span className="text-xs font-extrabold">Synced Mobile App</span>
                       </div>
-                      <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[9px] font-bold">iOS / Android</span>
+                      <span className="px-2 py-0.5 rounded bg-[#FFD705]/20 text-emerald-400 text-[9px] font-bold">iOS / Android</span>
                     </div>
 
                     {/* Smartphone Screen View */}
                     <div className="rounded-2xl bg-slate-950 p-3 border border-slate-800 space-y-2 text-[10px] shadow-inner">
                       <div className="flex items-center justify-between text-slate-400 font-bold pb-1 border-b border-slate-800">
                         <span>Joanna • Maria • Sameer</span>
-                        <span className="text-cyan-400">10 Aug 2022</span>
+                        <span className="text-[#548DFF]">10 Aug 2022</span>
                       </div>
 
                       <div className="p-2 rounded-lg bg-[#fef08a] text-amber-950 font-bold space-y-0.5">
@@ -413,9 +413,9 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
         {/* TAB 2: HIGH RESOLUTION RENDERED PHOTO */}
         {activeTab === 'highResPhoto' && (
           <div className="mt-8 rounded-3xl border border-purple-500/40 bg-slate-900/90 shadow-2xl p-6 sm:p-8 relative overflow-hidden backdrop-blur-md animate-in fade-in space-y-4">
-            <div className="flex items-center justify-between text-xs font-bold text-purple-300 pb-2 border-b border-slate-800">
+            <div className="flex items-center justify-between text-xs font-bold text-[#5B7CFD] pb-2 border-b border-slate-800">
               <span className="flex items-center gap-2">
-                <ImageIcon className="w-4 h-4 text-purple-400" />
+                <ImageIcon className="w-4 h-4 text-[#548DFF]" />
                 Plexaar Calendex Exact Laptop & Smartphone Photographic Mockup
               </span>
               <span className="text-slate-400">Account #689002</span>
@@ -433,7 +433,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                   Photographic dual-device rendering of Joanna, Maria, Sameer staff schedules
                 </span>
-                <span className="text-cyan-300 font-extrabold text-[11px] uppercase tracking-wider">Synced Live</span>
+                <span className="text-[#548DFF] font-extrabold text-[11px] uppercase tracking-wider">Synced Live</span>
               </div>
             </div>
           </div>
@@ -444,7 +444,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
           <div className="mt-8 rounded-3xl border border-slate-800 bg-slate-900/90 shadow-2xl p-6 sm:p-8 backdrop-blur-md animate-in fade-in">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 mb-6 border-b border-slate-800 gap-4">
               <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-xl bg-purple-500/20 text-purple-400 border border-purple-500/30">
+                <div className="p-2.5 rounded-xl bg-[#5B7CFD]/20 text-[#548DFF] border border-[#5B7CFD]/30">
                   <Calendar className="w-5 h-5" />
                 </div>
                 <div>
@@ -475,7 +475,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
               <div className="lg:col-span-5 space-y-4">
                 <div className="text-xs font-extrabold uppercase tracking-wider text-slate-400 flex items-center justify-between">
                   <span>Select Appointment Slot</span>
-                  <span className="text-purple-400 font-bold">Wednesday 10, August 2022</span>
+                  <span className="text-[#548DFF] font-bold">Wednesday 10, August 2022</span>
                 </div>
 
                 <div className="space-y-2.5">
@@ -483,12 +483,12 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                     onClick={() => { setSelectedSlot('10:00 AM'); setBookingConfirmed(false); }}
                     className={`p-3.5 rounded-2xl border transition-all duration-200 flex items-center justify-between cursor-pointer ${
                       selectedSlot === '10:00 AM'
-                        ? 'bg-purple-500/20 border-purple-500/80 shadow-lg shadow-purple-500/10'
+                        ? 'bg-[#5B7CFD]/20 border-purple-500/80 shadow-lg shadow-purple-500/10'
                         : 'bg-slate-950/80 border-slate-800 hover:border-slate-700'
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <Clock className={`w-4 h-4 ${selectedSlot === '10:00 AM' ? 'text-purple-400' : 'text-slate-500'}`} />
+                      <Clock className={`w-4 h-4 ${selectedSlot === '10:00 AM' ? 'text-[#548DFF]' : 'text-slate-500'}`} />
                       <div>
                         <div className="text-xs font-bold text-white">10:00 AM - 11:00 AM</div>
                         <div className="text-[10px] text-slate-400">Joanna Expert • AC Service</div>
@@ -503,18 +503,18 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                     onClick={() => { setSelectedSlot('12:00 PM'); setBookingConfirmed(false); }}
                     className={`p-3.5 rounded-2xl border transition-all duration-200 flex items-center justify-between cursor-pointer ${
                       selectedSlot === '12:00 PM'
-                        ? 'bg-purple-500/20 border-purple-500/80 shadow-lg shadow-purple-500/10'
+                        ? 'bg-[#5B7CFD]/20 border-purple-500/80 shadow-lg shadow-purple-500/10'
                         : 'bg-slate-950/80 border-slate-800 hover:border-slate-700'
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <Clock className={`w-4 h-4 ${selectedSlot === '12:00 PM' ? 'text-purple-400' : 'text-slate-500'}`} />
+                      <Clock className={`w-4 h-4 ${selectedSlot === '12:00 PM' ? 'text-[#548DFF]' : 'text-slate-500'}`} />
                       <div>
                         <div className="text-xs font-bold text-white">12:00 PM - 01:30 PM</div>
                         <div className="text-[10px] text-slate-400">Maria Expert • Laser Skin Removal</div>
                       </div>
                     </div>
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#FFD705]/20 text-emerald-300">
                       TOM BENTLEY
                     </span>
                   </div>
@@ -523,7 +523,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                 <button
                   onClick={() => setBookingConfirmed(true)}
                   disabled={!selectedSlot}
-                  className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white shadow-lg shadow-[#548DFF]/25 hover:shadow-[#548DFF]/40 transition-all flex items-center justify-center gap-2"
                 >
                   <Check className="w-4 h-4" />
                   <span>Simulate Calendex Booking Confirmation</span>
@@ -543,7 +543,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                   </div>
 
                   {bookingConfirmed ? (
-                    <div className="p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-200 space-y-2 animate-in fade-in">
+                    <div className="p-4 rounded-2xl bg-[#42D742]/10 border border-[#FFD705]/40 text-emerald-200 space-y-2 animate-in fade-in">
                       <div className="flex items-center gap-2 font-bold text-sm text-emerald-300">
                         <CheckCircle2 className="w-5 h-5 text-emerald-400" />
                         <span>Appointment Confirmed for {selectedSlot}!</span>
@@ -556,11 +556,11 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
                     <div className="space-y-3">
                       <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
                         <span className="text-xs text-slate-300">No-Show Reduction Rate</span>
-                        <span className="text-xs font-bold text-purple-400">78% Average</span>
+                        <span className="text-xs font-bold text-[#548DFF]">78% Average</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
                         <span className="text-xs text-slate-300">Buffer Time Auto-Allocation</span>
-                        <span className="text-xs font-bold text-cyan-400">15 mins between slots</span>
+                        <span className="text-xs font-bold text-[#548DFF]">15 mins between slots</span>
                       </div>
                       <div className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
                         <span className="text-xs text-slate-300">iReach HR Staff Sync</span>
@@ -572,7 +572,7 @@ export const CalendexSection: React.FC<CalendexSectionProps> = ({ theme, onOpenD
 
                 <div className="pt-4 mt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
                   <span>Calendex API Status: Fully Operational</span>
-                  <span className="text-purple-400 font-bold">Account #689002</span>
+                  <span className="text-[#548DFF] font-bold">Account #689002</span>
                 </div>
               </div>
 

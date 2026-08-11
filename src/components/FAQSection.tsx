@@ -23,7 +23,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
   const isDark = theme === 'dark';
 
   return (
-    <section id="faq" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="faq" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -35,14 +35,14 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
-            <HelpCircle className="w-3.5 h-3.5 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
+            <HelpCircle className="w-3.5 h-3.5 text-[#548DFF]" />
             ENTERPRISE KNOWLEDGE BASE
           </div>
 
           <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             Frequently Asked{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-indigo-600 dark:from-cyan-400 dark:to-indigo-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] to-[#548DFF]">
               Questions.
             </span>
           </h2>
@@ -62,7 +62,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search FAQs (e.g., What is Buzzcom?, Security, Implementation...)"
-              className={`w-full pl-11 pr-4 py-3 rounded-2xl text-xs transition-colors focus:outline-none focus:border-cyan-500 ${
+              className={`w-full pl-11 pr-4 py-3 rounded-2xl text-xs transition-colors focus:outline-none focus:border-[#548DFF] ${
                 isDark 
                   ? 'bg-slate-900 border border-slate-800 text-white placeholder-slate-500' 
                   : 'bg-white border border-slate-200 text-slate-900 placeholder-slate-400 shadow-sm'
@@ -77,7 +77,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                   activeCategory === cat
-                    ? 'bg-cyan-500 text-slate-950 font-black'
+                    ? 'bg-[#548DFF] text-slate-950 font-black'
                     : isDark 
                       ? 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800' 
                       : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200 shadow-sm'
@@ -104,7 +104,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
                   key={idx}
                   className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? isDark ? 'bg-slate-900 border-cyan-500/50 shadow-lg' : 'bg-white border-cyan-500 shadow-md'
+                      ? isDark ? 'bg-slate-900 border-[#548DFF]/50 shadow-lg' : 'bg-white border-[#548DFF] shadow-md'
                       : isDark ? 'bg-slate-950/80 border-slate-800 hover:border-slate-700' : 'bg-white border-slate-200 hover:border-slate-300'
                   }`}
                 >
@@ -117,14 +117,14 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
                     <span className="flex items-center gap-3">
                       <span className={`text-xs px-2.5 py-0.5 rounded-full border ${
                         isDark 
-                          ? 'bg-slate-800 text-cyan-400 border-slate-700' 
-                          : 'bg-slate-100 text-cyan-600 border-slate-200'
+                          ? 'bg-slate-800 text-[#548DFF] border-slate-700' 
+                          : 'bg-slate-100 text-[#548DFF] border-slate-200'
                       }`}>
                         {faq.category}
                       </span>
                       <span>{faq.question}</span>
                     </span>
-                    <ChevronDown className={`w-4 h-4 text-cyan-500 transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 text-[#548DFF] transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
 
                   {isOpen && (
@@ -151,7 +151,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({ theme, onOpenDemo }) => 
           </p>
           <button
             onClick={onOpenDemo}
-            className="px-6 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 hover:bg-cyan-400 text-slate-950 transition-all shadow-md"
+            className="px-6 py-2.5 rounded-xl text-xs font-bold bg-[#548DFF] hover:bg-[#5B7CFD] text-slate-950 transition-all shadow-md"
           >
             Speak With Enterprise Specialist
           </button>

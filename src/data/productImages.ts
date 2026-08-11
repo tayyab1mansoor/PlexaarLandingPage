@@ -22,7 +22,6 @@ export const PRODUCT_BG_IMAGES: Record<ProductId, string> = {
 
 // Section-specific background images (rendered at 40% opacity with readable overlays)
 export const SECTION_BG_IMAGES = {
-  problem: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80', // SaaS fragmentation & tech infrastructure
   ecosystem: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80', // Connected digital enterprise network
   customerJourney: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80', // End-to-end business process workflow
   executiveRole: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80', // Executive boardroom leadership

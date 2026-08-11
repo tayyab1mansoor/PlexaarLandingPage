@@ -7,10 +7,10 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     tagline: 'Business Communication, Connected to Everything.',
     category: 'COMMUNICATION HUB',
     description: 'Enterprise team messaging, customer chat, video conferencing, and call operations seamlessly synced with your central business context.',
-    color: '#06b6d4', // Cyan
-    gradient: 'from-cyan-500 to-teal-400',
-    borderGlow: 'border-cyan-500/30 hover:border-cyan-400',
-    bgGlow: 'bg-cyan-500/10',
+    color: '#548DFF', // Brand blue
+    gradient: 'from-[#548DFF] to-[#5B7CFD]',
+    borderGlow: 'border-[#548DFF]/30 hover:border-[#548DFF]',
+    bgGlow: 'bg-[#548DFF]/10',
     iconName: 'MessageSquare',
     keyFeatures: [
       'Real-time Team Chat & Channels',
@@ -31,10 +31,10 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     tagline: 'Scheduling Without Operational Friction.',
     category: 'APPOINTMENT & BOOKING MANAGEMENT',
     description: 'Enterprise appointment scheduling and booking system that coordinates multi-staff availability, resource allocation, and automated reminders.',
-    color: '#8b5cf6', // Purple
-    gradient: 'from-purple-500 to-indigo-500',
-    borderGlow: 'border-purple-500/30 hover:border-purple-400',
-    bgGlow: 'bg-purple-500/10',
+    color: '#5B7CFD', // Marketing blue
+    gradient: 'from-[#5B7CFD] to-[#548DFF]',
+    borderGlow: 'border-[#5B7CFD]/30 hover:border-[#5B7CFD]',
+    bgGlow: 'bg-[#5B7CFD]/10',
     iconName: 'Calendar',
     keyFeatures: [
       'Multi-Calendar Resource Synchronization',
@@ -55,10 +55,10 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     tagline: 'Your People. Your Organization. One HR Experience.',
     category: 'HUMAN RESOURCES & WORKFORCE MANAGEMENT',
     description: 'Comprehensive HR management platform for employee records, attendance, leave requests, performance evaluations, and org hierarchy.',
-    color: '#3b82f6', // Royal Blue
-    gradient: 'from-blue-500 to-indigo-600',
-    borderGlow: 'border-blue-500/30 hover:border-blue-400',
-    bgGlow: 'bg-blue-500/10',
+    color: '#0575E6', // Primary blue
+    gradient: 'from-[#0575E6] to-[#548DFF]',
+    borderGlow: 'border-[#0575E6]/30 hover:border-[#548DFF]',
+    bgGlow: 'bg-[#0575E6]/10',
     iconName: 'Users',
     keyFeatures: [
       'Centralized Employee Directory & Profiles',
@@ -79,10 +79,10 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     tagline: 'Financial Visibility Built Into Your Business.',
     category: 'FINANCE & FINANCIAL MANAGEMENT',
     description: 'Command center for real-time revenue tracking, automated invoicing, expense classification, ledger streams, and cash flow forecasting.',
-    color: '#10b981', // Emerald
-    gradient: 'from-emerald-500 to-teal-500',
-    borderGlow: 'border-emerald-500/30 hover:border-emerald-400',
-    bgGlow: 'bg-emerald-500/10',
+    color: '#FFD705', // Brand yellow
+    gradient: 'from-[#FFD705] to-[#548DFF]',
+    borderGlow: 'border-[#FFD705]/40 hover:border-[#FFD705]',
+    bgGlow: 'bg-[#FFD705]/10',
     iconName: 'TrendingUp',
     keyFeatures: [
       'Real-time Cash Flow & Revenue Analytics',
@@ -103,10 +103,10 @@ export const PLEXAAR_PRODUCTS: ProductInfo[] = [
     tagline: 'Turn Marketing Activity Into Business Growth.',
     category: 'MARKETING PORTAL & OPERATIONS',
     description: 'Marketing campaign management portal that aligns promotion channels, customer engagement journeys, lead attribution, and ROI analytics.',
-    color: '#ec4899', // Pink / Rose
-    gradient: 'from-pink-500 to-rose-500',
-    borderGlow: 'border-pink-500/30 hover:border-pink-400',
-    bgGlow: 'bg-pink-500/10',
+    color: '#4294FF', // Soft brand blue
+    gradient: 'from-[#4294FF] to-[#548DFF]',
+    borderGlow: 'border-[#4294FF]/30 hover:border-[#548DFF]',
+    bgGlow: 'bg-[#4294FF]/10',
     iconName: 'Megaphone',
     keyFeatures: [
       'Omnichannel Campaign Orchestration',

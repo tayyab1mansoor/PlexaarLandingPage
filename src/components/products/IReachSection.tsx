@@ -51,7 +51,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
   const ireachGif = PRODUCT_GIF_ANIMATIONS.ireach;
 
   return (
-    <section id="product-ireach" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="product-ireach" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Product Relevant Background Image with Opacity Slider */}
       <div 
@@ -74,7 +74,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
             </div>
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Human Capital & Shift Rosters{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
                 In Perfect Harmony.
               </span>
             </h2>
@@ -100,7 +100,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
 
             <button
               onClick={() => onOpenDemo('ireach')}
-              className="px-6 py-3 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 shrink-0"
+              className="px-6 py-3 rounded-xl text-sm font-bold bg-blue-600 hover:bg-blue-500 text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#0575E6]/20 shrink-0"
             >
               <span>Request iReach Demo</span>
               <ArrowRight className="w-4 h-4" />
@@ -119,7 +119,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <Activity className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+              <Activity className="w-3.5 h-3.5 text-[#548DFF] animate-pulse" />
               <span>Live Animated GIF HR Radar</span>
             </button>
 
@@ -208,7 +208,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
 
               <div className={`p-4 rounded-2xl border ${isDark ? 'bg-slate-950/80 border-slate-800' : 'bg-slate-50 border-slate-200'} space-y-1`}>
                 <div className={`text-[11px] font-bold uppercase ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Active Shifts</div>
-                <div className="text-2xl font-black text-purple-600 dark:text-purple-400">42 Rosters</div>
+                <div className="text-2xl font-black text-purple-600 dark:text-[#548DFF]">42 Rosters</div>
                 <div className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Calendex Synced</div>
               </div>
 
@@ -273,7 +273,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
                     {filtered.map((emp) => (
                       <tr key={emp.id} className={`${isDark ? 'hover:bg-slate-900/50' : 'hover:bg-slate-50'} transition-colors`}>
                         <td className={`p-3.5 font-bold ${isDark ? 'text-white' : 'text-slate-900'} flex items-center gap-2`}>
-                          <div className="w-7 h-7 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-600 dark:text-blue-300 flex items-center justify-center text-[10px] font-extrabold">
+                          <div className="w-7 h-7 rounded-full bg-[#0575E6]/20 border border-[#0575E6]/30 text-blue-600 dark:text-blue-300 flex items-center justify-center text-[10px] font-extrabold">
                             {emp.name.charAt(0)}
                           </div>
                           {emp.name}
@@ -281,7 +281,7 @@ export const IReachSection: React.FC<IReachSectionProps> = ({ theme, onOpenDemo 
                         <td className={`p-3.5 ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{emp.role}</td>
                         <td className={`p-3.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{emp.dept}</td>
                         <td className="p-3.5">
-                          <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                          <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-[#42D742]/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                             {emp.status}
                           </span>
                         </td>

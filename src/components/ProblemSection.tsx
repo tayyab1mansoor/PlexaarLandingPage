@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ThemeMode } from '../types';
-import { SECTION_BG_IMAGES } from '../data/productImages';
 import { 
   XCircle, 
   CheckCircle2, 
@@ -35,23 +34,15 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
   ];
 
   const unifiedSolutions = [
-    { title: 'Buzzcom Communication', desc: 'Calls & messages automatically attached to client files', icon: MessageSquare, color: 'text-cyan-400' },
-    { title: 'Calendex Appointments', desc: 'Real-time staff allocation auto-checked with iReach', icon: Calendar, color: 'text-purple-400' },
+    { title: 'Buzzcom Communication', desc: 'Calls & messages automatically attached to client files', icon: MessageSquare, color: 'text-[#548DFF]' },
+    { title: 'Calendex Appointments', desc: 'Real-time staff allocation auto-checked with iReach', icon: Calendar, color: 'text-[#548DFF]' },
     { title: 'iReach HR Hub', desc: 'Live attendance & payroll sync directly with Ondal', icon: Users, color: 'text-blue-400' },
     { title: 'Ondal Financial Ledger', desc: 'Automated billing upon completion of Calendex slots', icon: TrendingUp, color: 'text-emerald-400' },
-    { title: 'SalexPlex Marketing', desc: 'Lead attribution tracked end-to-end to revenue generated', icon: Megaphone, color: 'text-pink-400' }
+    { title: 'SalexPlex Marketing', desc: 'Lead attribution tracked end-to-end to revenue generated', icon: Megaphone, color: 'text-[#4294FF]' }
   ];
 
   return (
-    <section id="problem" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
-      
-      {/* Section Background Image with 40% Opacity */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center pointer-events-none opacity-40 transition-all duration-500"
-        style={{ backgroundImage: `url(${SECTION_BG_IMAGES.problem})` }}
-      />
-      <div className={`absolute inset-0 bg-gradient-to-b ${isDark ? 'from-slate-950/60 via-slate-950/40 to-slate-950' : 'from-slate-50/60 via-slate-50/40 to-slate-50'} pointer-events-none`} />
-
+    <section id="problem" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
@@ -63,7 +54,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
 
           <h2 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
             Your Business Has Many Systems.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
               Your Business Shouldn't Feel Disconnected.
             </span>
           </h2>
@@ -95,13 +86,13 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
               onClick={() => setActiveTab('plexaar')}
               className={`px-6 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-2 border ${
                 activeTab === 'plexaar'
-                  ? 'bg-gradient-to-r from-indigo-600 to-cyan-500 text-white border-transparent shadow-xl shadow-indigo-500/30'
+                  ? 'bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white border-transparent shadow-xl shadow-[#548DFF]/30'
                   : isDark
                   ? 'bg-slate-900/40 text-slate-400 border-slate-800 hover:text-white'
                   : 'bg-white text-slate-600 border-slate-200 hover:text-slate-900 shadow-sm'
               }`}
             >
-              <CheckCircle2 className="w-4 h-4 text-cyan-300" />
+              <CheckCircle2 className="w-4 h-4 text-[#548DFF]" />
               <span>Plexaar Connected Ecosystem</span>
             </button>
           </div>
@@ -110,7 +101,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
           <div className={`p-8 sm:p-10 rounded-3xl border transition-all duration-300 ${
             activeTab === 'fragmented'
               ? isDark ? 'bg-slate-900/90 border-rose-500/30 shadow-2xl' : 'bg-white border-rose-200 shadow-xl'
-              : isDark ? 'bg-slate-900/90 border-cyan-500/30 shadow-2xl' : 'bg-white border-cyan-200 shadow-xl'
+              : isDark ? 'bg-slate-900/90 border-[#548DFF]/30 shadow-2xl' : 'bg-white border-[#548DFF]/30 shadow-xl'
           }`}>
             
             <div className={`flex flex-col md:flex-row items-center justify-between pb-6 mb-8 border-b ${isDark ? 'border-slate-800' : 'border-slate-200'} gap-4`}>
@@ -128,7 +119,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
               <div className={`px-4 py-2 rounded-xl text-xs font-bold border ${
                 activeTab === 'fragmented' 
                   ? 'bg-rose-500/10 text-rose-500 border-rose-500/20' 
-                  : 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20'
+                  : 'bg-[#548DFF]/10 text-[#548DFF] border-[#548DFF]/20'
               }`}>
                 {activeTab === 'fragmented' ? 'High Risk & Lost Hours' : 'Enterprise Operating Excellence'}
               </div>
@@ -143,7 +134,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
                     className={`p-5 rounded-2xl border transition-all duration-200 flex flex-col justify-between ${
                       activeTab === 'fragmented'
                         ? isDark ? 'bg-slate-950/60 border-rose-500/20 hover:border-rose-500/40' : 'bg-rose-50/60 border-rose-200 hover:border-rose-300'
-                        : isDark ? 'bg-slate-950/80 border-slate-800 hover:border-cyan-500/40' : 'bg-slate-50 border-slate-200 hover:border-cyan-500/40'
+                        : isDark ? 'bg-slate-950/80 border-slate-800 hover:border-[#548DFF]/40' : 'bg-slate-50 border-slate-200 hover:border-[#548DFF]/40'
                     }`}
                   >
                     <div>
@@ -159,10 +150,10 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
                     </div>
 
                     <div className={`pt-4 mt-4 border-t ${isDark ? 'border-slate-800/80' : 'border-slate-200'} flex items-center justify-between text-[10px] font-bold`}>
-                      <span className={activeTab === 'fragmented' ? 'text-rose-500' : 'text-cyan-500'}>
+                      <span className={activeTab === 'fragmented' ? 'text-rose-500' : 'text-[#548DFF]'}>
                         {activeTab === 'fragmented' ? 'Siloed Data' : 'Connected'}
                       </span>
-                      {activeTab === 'fragmented' ? <XCircle className="w-3.5 h-3.5 text-rose-500" /> : <CheckCircle2 className="w-3.5 h-3.5 text-cyan-500" />}
+                      {activeTab === 'fragmented' ? <XCircle className="w-3.5 h-3.5 text-rose-500" /> : <CheckCircle2 className="w-3.5 h-3.5 text-[#548DFF]" />}
                     </div>
                   </div>
                 );
@@ -172,7 +163,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
             {/* Bottom Summary Bar */}
             <div className={`mt-8 pt-6 border-t ${isDark ? 'border-slate-800' : 'border-slate-200'} flex flex-col sm:flex-row items-center justify-between gap-4`}>
               <div className="flex items-center gap-3">
-                <Zap className="w-5 h-5 text-cyan-500" />
+                <Zap className="w-5 h-5 text-[#548DFF]" />
                 <span className={`text-xs font-medium ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
                   {activeTab === 'fragmented'
                     ? 'Average enterprise loses 12+ hours per employee weekly re-entering data between tools.'
@@ -182,7 +173,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ theme, onNavigat
 
               <button
                 onClick={() => onNavigateTo('ecosystem')}
-                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-500 text-white transition-all flex items-center gap-2 shrink-0 shadow-sm"
+                className="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#548DFF] hover:bg-[#5B7CFD] text-white transition-all flex items-center gap-2 shrink-0 shadow-sm"
               >
                 <span>See Ecosystem Architecture</span>
                 <ArrowRight className="w-3.5 h-3.5" />

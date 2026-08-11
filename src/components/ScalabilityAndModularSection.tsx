@@ -34,7 +34,7 @@ export const ScalabilityAndModularSection: React.FC<ScalabilityAndModularSection
   ];
 
   return (
-    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -48,13 +48,13 @@ export const ScalabilityAndModularSection: React.FC<ScalabilityAndModularSection
         {/* SCALABILITY TIMELINE */}
         <div>
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
               ENTERPRISE SCALABILITY
             </div>
 
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Built for Organizations That{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-indigo-600 dark:from-cyan-400 dark:to-indigo-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] to-[#548DFF]">
                 Keep Growing.
               </span>
             </h2>
@@ -70,18 +70,18 @@ export const ScalabilityAndModularSection: React.FC<ScalabilityAndModularSection
               return (
                 <div key={idx} className={`p-6 rounded-3xl border transition-all flex flex-col justify-between ${
                   isDark 
-                    ? 'bg-slate-900/80 border-slate-800 hover:border-cyan-500/40' 
-                    : 'bg-white border-slate-200 hover:border-cyan-500/40 shadow-sm'
+                    ? 'bg-slate-900/80 border-slate-800 hover:border-[#548DFF]/40' 
+                    : 'bg-white border-slate-200 hover:border-[#548DFF]/40 shadow-sm'
                 }`}>
                   <div>
                     <div className={`p-3 rounded-2xl border w-fit mb-4 ${isDark ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                      <IconComp className="w-5 h-5 text-cyan-500" />
+                      <IconComp className="w-5 h-5 text-[#548DFF]" />
                     </div>
                     <div className={`text-sm font-black mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{phase.title}</div>
                     <p className={`text-xs leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{phase.desc}</p>
                   </div>
 
-                  <div className={`pt-4 mt-4 border-t flex items-center justify-between text-[10px] font-bold text-cyan-600 dark:text-cyan-400 ${
+                  <div className={`pt-4 mt-4 border-t flex items-center justify-between text-[10px] font-bold text-[#548DFF] ${
                     isDark ? 'border-slate-800' : 'border-slate-200'
                   }`}>
                     <span>Scalable Architecture</span>
@@ -96,13 +96,13 @@ export const ScalabilityAndModularSection: React.FC<ScalabilityAndModularSection
         {/* MODULAR ECOSYSTEM APPROACH */}
         <div>
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-purple-400 bg-purple-500/10 border border-purple-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-purple-600 dark:text-[#548DFF] bg-purple-500/10 border border-purple-500/20">
               MODULAR ECOSYSTEM
             </div>
 
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Explore Specialized Products Within{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] to-[#548DFF]">
                 The Plexaar Ecosystem.
               </span>
             </h2>
@@ -133,7 +133,7 @@ export const ScalabilityAndModularSection: React.FC<ScalabilityAndModularSection
                     </span>
                   </div>
 
-                  <div className={`text-sm font-extrabold group-hover:text-cyan-500 mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                  <div className={`text-sm font-extrabold group-hover:text-[#548DFF] mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                     {p.name}
                   </div>
 

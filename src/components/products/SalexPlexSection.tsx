@@ -41,7 +41,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
   const salexplexGif = PRODUCT_GIF_ANIMATIONS.salexplex;
 
   return (
-    <section id="product-salexplex" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="product-salexplex" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Product Relevant Background Image with Opacity Slider */}
       <div 
@@ -58,13 +58,13 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
         {/* Header */}
         <div className={`flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pb-12 border-b ${isDark ? 'border-slate-800/80' : 'border-slate-200'}`}>
           <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-pink-600 dark:text-pink-400 bg-pink-500/10 border border-pink-500/20">
-              <Megaphone className="w-3.5 h-3.5 text-pink-500" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
+              <Megaphone className="w-3.5 h-3.5 text-[#548DFF]" />
               SALEXPLEX — OMNICHANNEL MARKETING & LEADS PORTAL
             </div>
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Customer Acquisition & Funnels{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 dark:from-pink-400 dark:via-purple-300 dark:to-indigo-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
                 Engineered for High ROI.
               </span>
             </h2>
@@ -76,7 +76,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
             {/* Opacity Control Pill */}
             <div className={`px-3.5 py-2 rounded-xl ${isDark ? 'bg-slate-900/90 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-700 shadow-sm'} border text-xs font-bold flex items-center gap-2.5`}>
-              <SlidersHorizontal className="w-3.5 h-3.5 text-pink-500" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#548DFF]" />
               <span className={`text-[11px] whitespace-nowrap ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>BG Opacity: {bgOpacity}%</span>
               <input 
                 type="range" 
@@ -84,13 +84,13 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                 max="80" 
                 value={bgOpacity} 
                 onChange={(e) => setBgOpacity(Number(e.target.value))}
-                className="w-16 accent-pink-500 cursor-pointer"
+                className="w-16 accent-[#548DFF] cursor-pointer"
               />
             </div>
 
             <button
               onClick={() => onOpenDemo('salexplex')}
-              className="px-6 py-3 rounded-xl text-sm font-bold bg-pink-600 hover:bg-pink-500 text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-pink-500/20 shrink-0"
+              className="px-6 py-3 rounded-xl text-sm font-bold bg-[#548DFF] hover:bg-[#5B7CFD] text-white transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#4294FF]/20 shrink-0"
             >
               <span>Request SalexPlex Demo</span>
               <ArrowRight className="w-4 h-4" />
@@ -105,7 +105,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
               onClick={() => setActiveTab('animatedGif')}
               className={`px-4 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 ${
                 activeTab === 'animatedGif'
-                  ? 'bg-pink-600 text-white shadow-md'
+                  ? 'bg-[#548DFF] text-white shadow-md'
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -117,7 +117,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
               onClick={() => setActiveTab('interactiveFunnel')}
               className={`px-4 py-2 rounded-xl text-xs font-extrabold transition-all flex items-center gap-2 ${
                 activeTab === 'interactiveFunnel'
-                  ? 'bg-pink-600 text-white shadow-md'
+                  ? 'bg-[#548DFF] text-white shadow-md'
                   : isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -126,7 +126,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
             </button>
           </div>
 
-          <div className="text-xs text-pink-600 dark:text-pink-300 font-medium flex items-center gap-2">
+          <div className="text-xs text-[#548DFF] font-medium flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
             <span>AI Lead Scoring • Direct Calendex Sync</span>
           </div>
@@ -134,11 +134,11 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
 
         {/* TAB 1: LIVE ANIMATED GIF SHOWCASE */}
         {activeTab === 'animatedGif' && (
-          <div className={`mt-8 rounded-3xl border ${isDark ? 'border-pink-500/40 bg-slate-900/90 shadow-2xl' : 'border-pink-200 bg-white shadow-xl'} p-6 sm:p-8 relative overflow-hidden backdrop-blur-md animate-in fade-in`}>
+          <div className={`mt-8 rounded-3xl border ${isDark ? 'border-[#4294FF]/40 bg-slate-900/90 shadow-2xl' : 'border-[#4294FF]/30 bg-white shadow-xl'} p-6 sm:p-8 relative overflow-hidden backdrop-blur-md animate-in fade-in`}>
             <div className={`flex items-center justify-between pb-4 mb-4 border-b ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-pink-500 animate-ping" />
-                <span className="text-xs font-extrabold uppercase text-pink-600 dark:text-pink-300 tracking-wider">
+                <span className="w-3 h-3 rounded-full bg-[#548DFF] animate-ping" />
+                <span className="text-xs font-extrabold uppercase text-[#548DFF] tracking-wider">
                   SalexPlex Marketing Analytics GIF Preview
                 </span>
               </div>
@@ -148,7 +148,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                   isDark ? 'bg-slate-800 text-white hover:bg-slate-700' : 'bg-slate-100 text-slate-800 hover:bg-slate-200'
                 }`}
               >
-                {isPlayingGif ? <Pause className="w-3.5 h-3.5 text-amber-500" /> : <Play className="w-3.5 h-3.5 text-pink-500" />}
+                {isPlayingGif ? <Pause className="w-3.5 h-3.5 text-amber-500" /> : <Play className="w-3.5 h-3.5 text-[#548DFF]" />}
                 <span>{isPlayingGif ? 'Pause Animation' : 'Play Animation'}</span>
               </button>
             </div>
@@ -161,16 +161,16 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-              <div className="absolute top-6 left-6 p-4 rounded-2xl bg-slate-950/80 border border-pink-500/40 backdrop-blur-md max-w-sm space-y-1">
-                <div className="text-xs font-black text-pink-300 uppercase tracking-widest flex items-center gap-2">
-                  <Globe className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+              <div className="absolute top-6 left-6 p-4 rounded-2xl bg-slate-950/80 border border-[#4294FF]/40 backdrop-blur-md max-w-sm space-y-1">
+                <div className="text-xs font-black text-[#4294FF] uppercase tracking-widest flex items-center gap-2">
+                  <Globe className="w-3.5 h-3.5 text-[#548DFF] animate-pulse" />
                   Omnichannel Customer Acquisition
                 </div>
                 <div className="text-sm font-bold text-white">{salexplexGif.caption}</div>
                 <p className="text-[11px] text-slate-300 leading-relaxed">{salexplexGif.description}</p>
               </div>
 
-              <div className="absolute bottom-6 right-6 p-3 rounded-xl bg-pink-500 text-white font-extrabold text-xs shadow-2xl border border-pink-400 flex items-center gap-2">
+              <div className="absolute bottom-6 right-6 p-3 rounded-xl bg-[#548DFF] text-white font-extrabold text-xs shadow-2xl border border-[#4294FF] flex items-center gap-2">
                 <Zap className="w-4 h-4 text-amber-300" />
                 <span>5.1x Average Marketing ROI Tracked</span>
               </div>
@@ -197,8 +197,8 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                       className={`p-4 rounded-2xl border transition-all duration-200 cursor-pointer ${
                         activeCampaign === idx
                           ? isDark 
-                            ? 'bg-pink-500/20 border-pink-500/80 shadow-lg shadow-pink-500/10'
-                            : 'bg-pink-50 border-pink-500 shadow-md'
+                            ? 'bg-[#4294FF]/20 border-[#4294FF]/80 shadow-lg shadow-[#548DFF]/10'
+                            : 'bg-[#548DFF]/10 border-pink-500 shadow-md'
                           : isDark
                             ? 'bg-slate-950/80 border-slate-800 hover:border-slate-700'
                             : 'bg-slate-50 border-slate-200 hover:border-slate-300'
@@ -206,7 +206,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                     >
                       <div className="flex items-center justify-between mb-2">
                         <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>{c.name}</span>
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-[#42D742]/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                           {c.status}
                         </span>
                       </div>
@@ -214,7 +214,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                       <div className={`grid grid-cols-3 gap-2 text-center text-[10px] pt-2 border-t ${isDark ? 'border-slate-800/80' : 'border-slate-200'}`}>
                         <div>
                           <div className={isDark ? 'text-slate-400' : 'text-slate-500'}>Total Leads</div>
-                          <div className="font-black text-pink-600 dark:text-pink-300 text-xs">{c.leads}</div>
+                          <div className="font-black text-[#548DFF] text-xs">{c.leads}</div>
                         </div>
                         <div>
                           <div className={isDark ? 'text-slate-400' : 'text-slate-500'}>Ad Reach</div>
@@ -237,7 +237,7 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
                     <div className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
                       Funnel Conversion Pipeline ({campaigns[activeCampaign].name})
                     </div>
-                    <span className="text-xs text-pink-600 dark:text-pink-400 font-bold">Auto-Sync to Ondal ERP</span>
+                    <span className="text-xs text-[#548DFF] font-bold">Auto-Sync to Ondal ERP</span>
                   </div>
 
                   <div className="space-y-3">
@@ -248,19 +248,19 @@ export const SalexPlexSection: React.FC<SalexPlexSectionProps> = ({ theme, onOpe
 
                     <div className={`p-3.5 rounded-xl border flex items-center justify-between ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
                       <span className={`text-xs font-bold ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>Qualified Leads Captured</span>
-                      <span className="text-xs font-black text-pink-600 dark:text-pink-400">{campaigns[activeCampaign].leads} Leads</span>
+                      <span className="text-xs font-black text-[#548DFF]">{campaigns[activeCampaign].leads} Leads</span>
                     </div>
 
                     <div className={`p-3.5 rounded-xl border flex items-center justify-between ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
                       <span className={`text-xs ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>Direct Calendex Bookings Created</span>
-                      <span className="text-xs font-bold text-purple-600 dark:text-purple-400">74% Conversion</span>
+                      <span className="text-xs font-bold text-purple-600 dark:text-[#548DFF]">74% Conversion</span>
                     </div>
                   </div>
                 </div>
 
                 <div className={`pt-4 border-t ${isDark ? 'border-slate-800 text-slate-400' : 'border-slate-200 text-slate-500'} flex items-center justify-between text-xs`}>
                   <span>SalexPlex Campaign AI: Active</span>
-                  <span className="text-pink-600 dark:text-pink-400 font-bold">ROI: {campaigns[activeCampaign].cta}</span>
+                  <span className="text-[#548DFF] font-bold">ROI: {campaigns[activeCampaign].cta}</span>
                 </div>
               </div>
 

@@ -95,11 +95,11 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
             </div>
             <h3 className="text-2xl font-black text-white">Demo Request Confirmed!</h3>
             <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-              Thank you, <span className="font-bold text-cyan-400">{formData.firstName}</span>. Our enterprise solutions architecture team has received your request and will contact you at <span className="font-bold text-cyan-400">{formData.email}</span> within 2 business hours.
+              Thank you, <span className="font-bold text-[#548DFF]">{formData.firstName}</span>. Our enterprise solutions architecture team has received your request and will contact you at <span className="font-bold text-[#548DFF]">{formData.email}</span> within 2 business hours.
             </p>
             <button
               onClick={() => { setSubmitted(false); onClose(); }}
-              className="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-bold text-xs shadow-lg"
+              className="mt-4 px-6 py-3 rounded-xl bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white font-bold text-xs shadow-lg"
             >
               Return to Website
             </button>
@@ -108,7 +108,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
           <div>
             
             <div className="mb-6 space-y-1">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
                 <Sparkles className="w-3 h-3" />
                 ENTERPRISE SOLUTION ARCHITECTURE DEMO
               </div>
@@ -133,7 +133,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     placeholder="Jane"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   />
                 </div>
 
@@ -147,7 +147,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     placeholder="Doe"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   />
                 </div>
               </div>
@@ -163,7 +163,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="jane@enterprise.com"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   />
                 </div>
 
@@ -177,7 +177,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     placeholder="Acme Global Inc."
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   />
                 </div>
               </div>
@@ -193,7 +193,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                     value={formData.jobTitle}
                     onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })}
                     placeholder="Chief Operating Officer"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   />
                 </div>
 
@@ -204,7 +204,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                   <select
                     value={formData.companySize}
                     onChange={(e) => setFormData({ ...formData, companySize: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-cyan-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-[#548DFF]"
                   >
                     <option>50-100 Employees</option>
                     <option>100-500 Employees</option>
@@ -223,7 +223,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                   <button
                     type="button"
                     onClick={selectAllProducts}
-                    className="text-[10px] font-bold text-cyan-400 hover:underline"
+                    className="text-[10px] font-bold text-[#548DFF] hover:underline"
                   >
                     Select All Products
                   </button>
@@ -239,12 +239,12 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                         onClick={() => toggleProduct(prod.id)}
                         className={`p-2.5 rounded-xl border text-left transition-all text-xs font-bold flex items-center justify-between ${
                           isChecked
-                            ? 'bg-cyan-500/20 border-cyan-500 text-white'
+                            ? 'bg-[#548DFF]/20 border-[#548DFF] text-white'
                             : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
                         }`}
                       >
                         <span>{prod.name}</span>
-                        {isChecked && <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />}
+                        {isChecked && <CheckCircle2 className="w-3.5 h-3.5 text-[#548DFF]" />}
                       </button>
                     );
                   })}
@@ -260,7 +260,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
                   value={formData.managementGoals}
                   onChange={(e) => setFormData({ ...formData, managementGoals: e.target.value })}
                   placeholder="e.g. Unify appointments with our financial ledger and HR attendance."
-                  className="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+                  className="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#548DFF]"
                 />
               </div>
 
@@ -275,7 +275,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
 
                 <button
                   type="submit"
-                  className="w-full sm:w-2/3 py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 text-white shadow-xl shadow-indigo-500/30 hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-2/3 py-3.5 px-4 rounded-xl font-bold text-xs bg-gradient-to-r from-[#548DFF] to-[#5B7CFD] text-white shadow-xl shadow-[#548DFF]/30 hover:scale-[1.01] active:scale-95 transition-all flex items-center justify-center gap-2"
                 >
                   <span>REQUEST MY PLEXAAR DEMO</span>
                   <ArrowRight className="w-4 h-4" />
@@ -283,7 +283,7 @@ export const DemoModal: React.FC<DemoModalProps> = ({ isOpen, onClose, preselect
               </div>
 
               <div className="text-center text-[10px] text-slate-500 flex items-center justify-center gap-1.5">
-                <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#548DFF]" />
                 <span>Your information is protected under enterprise NDA privacy standards.</span>
               </div>
 

@@ -34,19 +34,19 @@ export const SecurityAndIntegrationsSection: React.FC<SecurityAndIntegrationsSec
 
   const getIntegrationIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Globe': return <Globe className="w-5 h-5 text-cyan-400" />;
-      case 'Layers': return <Layers className="w-5 h-5 text-purple-400" />;
+      case 'Globe': return <Globe className="w-5 h-5 text-[#548DFF]" />;
+      case 'Layers': return <Layers className="w-5 h-5 text-[#548DFF]" />;
       case 'Database': return <Database className="w-5 h-5 text-blue-400" />;
       case 'CreditCard': return <CreditCard className="w-5 h-5 text-emerald-400" />;
       case 'Cpu': return <Cpu className="w-5 h-5 text-amber-400" />;
       case 'Cloud': return <Cloud className="w-5 h-5 text-sky-400" />;
       case 'Phone': return <Phone className="w-5 h-5 text-teal-400" />;
-      default: return <MessageCircle className="w-5 h-5 text-pink-400" />;
+      default: return <MessageCircle className="w-5 h-5 text-[#4294FF]" />;
     }
   };
 
   return (
-    <section id="security" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section id="security" className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -60,7 +60,7 @@ export const SecurityAndIntegrationsSection: React.FC<SecurityAndIntegrationsSec
         {/* ENTERPRISE SECURITY */}
         <div>
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 bg-[#42D742]/10 border border-emerald-500/20">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
               ENTERPRISE SECURITY & GOVERNANCE
             </div>
@@ -86,7 +86,7 @@ export const SecurityAndIntegrationsSection: React.FC<SecurityAndIntegrationsSec
                     ? 'bg-slate-900/80 border-slate-800 hover:border-emerald-500/40' 
                     : 'bg-white border-slate-200 hover:border-emerald-500/40 shadow-sm'
                 }`}>
-                  <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 w-fit mb-4">
+                  <div className="p-3 rounded-2xl bg-[#42D742]/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 w-fit mb-4">
                     <IconComp className="w-6 h-6" />
                   </div>
                   <h3 className={`text-sm font-black mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{sec.title}</h3>
@@ -100,13 +100,13 @@ export const SecurityAndIntegrationsSection: React.FC<SecurityAndIntegrationsSec
         {/* VERIFIED INTEGRATIONS NETWORK */}
         <div>
           <div className="text-center max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 border border-cyan-500/20">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
               ECOSYSTEM INTEGRATIONS
             </div>
 
             <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
               Designed to Work With{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-indigo-600 dark:from-cyan-400 dark:to-indigo-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] to-[#548DFF]">
                 Your Existing Ecosystem.
               </span>
             </h2>

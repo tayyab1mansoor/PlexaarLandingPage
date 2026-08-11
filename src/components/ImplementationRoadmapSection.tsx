@@ -13,7 +13,7 @@ export const ImplementationRoadmapSection: React.FC<ImplementationRoadmapSection
   const isDark = theme === 'dark';
 
   return (
-    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
+    <section className={`py-24 relative overflow-hidden ${isDark ? 'bg-slate-950 text-white' : 'bg-[#fbfcff] text-[#131313]'}`}>
       
       {/* Section Background Image with 40% Opacity */}
       <div 
@@ -25,13 +25,13 @@ export const ImplementationRoadmapSection: React.FC<ImplementationRoadmapSection
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 border border-indigo-500/20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#548DFF] bg-[#548DFF]/10 border border-[#548DFF]/20">
             ENTERPRISE DEPLOYMENT MODEL
           </div>
 
           <h2 className={`text-3xl sm:text-5xl font-black tracking-tight leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             From Business Requirements to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-indigo-600 to-purple-600 dark:from-cyan-400 dark:via-indigo-300 dark:to-purple-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0575E6] via-[#548DFF] to-[#5B7CFD]">
               Connected Operations.
             </span>
           </h2>
@@ -47,18 +47,18 @@ export const ImplementationRoadmapSection: React.FC<ImplementationRoadmapSection
               key={idx}
               className={`p-5 rounded-2xl border transition-all flex flex-col justify-between ${
                 isDark 
-                  ? 'bg-slate-900/80 border-slate-800 hover:border-cyan-500/40' 
-                  : 'bg-white border-slate-200 hover:border-cyan-500/40 shadow-sm'
+                  ? 'bg-slate-900/80 border-slate-800 hover:border-[#548DFF]/40' 
+                  : 'bg-white border-slate-200 hover:border-[#548DFF]/40 shadow-sm'
               }`}
             >
               <div>
-                <div className="text-xl font-black text-cyan-600 dark:text-cyan-400 mb-2">
+                <div className="text-xl font-black text-[#548DFF] mb-2">
                   {step.number}
                 </div>
                 <div className={`text-xs font-black uppercase tracking-wider mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>
                   {step.title}
                 </div>
-                <div className="text-[10px] text-indigo-600 dark:text-indigo-300 font-bold mb-3">
+                <div className="text-[10px] text-[#548DFF] font-bold mb-3">
                   {step.subtitle}
                 </div>
                 <p className={`text-[11px] leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
@@ -70,7 +70,7 @@ export const ImplementationRoadmapSection: React.FC<ImplementationRoadmapSection
                 isDark ? 'border-slate-800 text-slate-500' : 'border-slate-200 text-slate-400'
               }`}>
                 <span>Phase {idx + 1}</span>
-                <CheckCircle2 className="w-3.5 h-3.5 text-cyan-500" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#548DFF]" />
               </div>
             </div>
           ))}
